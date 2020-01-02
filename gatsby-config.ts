@@ -39,5 +39,9 @@ export default {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-codegen',
+      options: {},
+    },
   ],
 }

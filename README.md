@@ -97,29 +97,31 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 7.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-8.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+8.  **`gatsby-config.js`**: Entry file for Gatsby configuration and setting up transforming of Gatsby files in Typescript. 
 
-9.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+9.  **`gatsby-config.ts`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
-10.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+10.  **`gatsby-node.ts`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-11.  **`jest-preprocess.js`**: Required to transform all js and jsx files.
+11.  **`gatsby-ssr.ts`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-12.  **`jest.config.js`**: Because Gatsby handles its own Babel configuration, Jest needs to be configured to use bable-jest. [Details](https://www.gatsbyjs.org/docs/unit-testing/#2-creating-a-configuration-file-for-jest) on Gatsby-specific setup for Jest.
+12.  **`jest-preprocess.js`**: Required to transform all js and jsx files.
 
-13.  **`loadershim.js`**: The setupFiles array lets you list files that will be included before all tests are run and requires this global function.
+13.  **`jest.config.js`**: Because Gatsby handles its own Babel configuration, Jest needs to be configured to use bable-jest. [Details](https://www.gatsbyjs.org/docs/unit-testing/#2-creating-a-configuration-file-for-jest) on Gatsby-specific setup for Jest.
 
-14.  **`LICENSE`**: Gatsby Starter Ionic is licensed under the MIT license.
+14.  **`loadershim.js`**: The setupFiles array lets you list files that will be included before all tests are run and requires this global function.
 
-15. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+15.  **`LICENSE`**: Gatsby Starter Ionic is licensed under the MIT license.
 
-16. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+16. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
-17. **`README.md`**: A text file containing useful reference information about your project.
+17. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-18. **`tsconfig.json`**: Configuration for Typescript
+18. **`README.md`**: A text file containing useful reference information about your project.
 
-19. **`tslint.json`**: Typescript linting options.
+19. **`tsconfig.json`**: Configuration for Typescript
+
+20. **`tslint.json`**: Typescript linting options.
 
 ## 🎓 Learning Gatsby
 
