@@ -1,3 +1,3 @@
-// import "./commands"
-import "cypress-axe"
-import "@testing-library/cypress/add-commands"
+import "gatsby-cypress"
+import 'cypress-axe'
+import './commands'

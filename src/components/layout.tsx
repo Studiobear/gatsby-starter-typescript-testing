@@ -57,7 +57,7 @@ const Layout = ({ children }: Props) => {
         </IonContent>
         <IonFooter>
           <IonToolbar>
-            <IonTitle>
+            <IonTitle size="small">
               © {new Date().getFullYear()}, Built with
               {` `}
               <a href="https://www.gatsbyjs.org">Gatsby</a>

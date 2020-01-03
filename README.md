@@ -11,13 +11,13 @@ A starter for Gatsby integrated with Ionic + Typescript and TDD-ready with Jest 
 
 Checkout other [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/).
 
-_NOTE: This is a community-created starter and not officially affiliated with Gatsby, Ionic or any other of the included libraries._ 
+_NOTE: This is a community-created starter and not officially affiliated with Gatsby, Ionic or any other of the included libraries._
 
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site with Ionic. 
+    Use the Gatsby CLI to create a new site with Ionic.
 
     ```shell
     # create a new Gatsby site using the Ionic starter
@@ -54,6 +54,7 @@ _NOTE: This is a community-created starter and not officially affiliated with Ga
     ```
 
     For e2e tests with Cypress
+
     ```
     npm run test:e2e
     ```
@@ -97,21 +98,21 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 7.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-8.  **`gatsby-config.js`**: Entry file for Gatsby configuration and setting up transforming of Gatsby files in Typescript. 
+8.  **`gatsby-config.js`**: Entry file for Gatsby configuration and setting up transforming of Gatsby files in Typescript.
 
 9.  **`gatsby-config.ts`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
-10.  **`gatsby-node.ts`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+10. **`gatsby-node.ts`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-11.  **`gatsby-ssr.ts`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+11. **`gatsby-ssr.ts`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-12.  **`jest-preprocess.js`**: Required to transform all js and jsx files.
+12. **`jest-preprocess.js`**: Required to transform all js and jsx files.
 
-13.  **`jest.config.js`**: Because Gatsby handles its own Babel configuration, Jest needs to be configured to use bable-jest. [Details](https://www.gatsbyjs.org/docs/unit-testing/#2-creating-a-configuration-file-for-jest) on Gatsby-specific setup for Jest.
+13. **`jest.config.js`**: Because Gatsby handles its own Babel configuration, Jest needs to be configured to use bable-jest. [Details](https://www.gatsbyjs.org/docs/unit-testing/#2-creating-a-configuration-file-for-jest) on Gatsby-specific setup for Jest.
 
-14.  **`loadershim.js`**: The setupFiles array lets you list files that will be included before all tests are run and requires this global function.
+14. **`loadershim.js`**: The setupFiles array lets you list files that will be included before all tests are run and requires this global function.
 
-15.  **`LICENSE`**: Gatsby Starter Ionic is licensed under the MIT license.
+15. **`LICENSE`**: Gatsby Starter Ionic is licensed under the MIT license.
 
 16. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
@@ -133,13 +134,14 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## Resources
 
-A variety of docs and other sources were used to help build this starter. 
+A variety of docs and other sources were used to help build this starter.
 
 - [Ionic Framework](https://ionicframework.com/docs/) - docs for react components, developing PWAs and using Ionic-flavored Native APIs.
-- [Jest](https://jestjs.io/docs/en/getting-started) - Docs for unit testing.
-- [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file) - Docs and more for writing our end-to-end tests.
-- [Gatsby Typescript Blog](https://github.com/assainov/gatsby-extensive-starter-typescript) - and it's related exploratory blog series [Migrating Gatsby to Typescript](https://www.extensive.one/migrating-gatsby-to-typescript-introduction/) 
-- [Axe-core](https://github.com/dequelabs/axe-core) - Accessibility tools provided by Dequelabs. [Docs](https://github.com/dequelabs/axe-core/tree/develop/doc) + [rules](https://dequeuniversity.com/rules/axe/3.4) explained deeper on dequeuniveristy.com
+- [Jest](https://jestjs.io/docs/en/getting-started) - docs for unit testing.
+- [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file) - docs and more for writing our end-to-end tests.
+- [Typescript](https://www.typescriptlang.org/docs/home.html) - docs for typing.
+- [Gatsby Typescript Blog](https://github.com/assainov/gatsby-extensive-starter-typescript) - and it's related exploratory blog series [Migrating Gatsby to Typescript](https://www.extensive.one/migrating-gatsby-to-typescript-introduction/)
+- [Axe-core](https://github.com/dequelabs/axe-core) - accessibility tools provided by Dequelabs. [Docs](https://github.com/dequelabs/axe-core/tree/develop/doc) + [rules](https://dequeuniversity.com/rules/axe/3.4) explained deeper on dequeuniveristy.com
 
 ## 💫 Deploy
 
