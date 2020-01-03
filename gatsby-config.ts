@@ -5,7 +5,7 @@ export default {
     author: `@bearcanrun`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet-async`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-typescript`,
     {
