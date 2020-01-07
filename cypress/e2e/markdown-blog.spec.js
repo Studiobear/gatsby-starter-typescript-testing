@@ -23,4 +23,15 @@ describe('Markdown blog', () => {
     cy.findAllByText("Blog").click()
     cy.url().should('include', '/blog')
   })
+
+  it('should display list of blog posts', () => {
+    cy.get('li').its('length').should('eq', 3);
+  })
+
+  it('should display placeholder if no blog posts', () => {
+    cy.get('li').its('length').should('eq', 0);
+    cy.get('#placeholder').its('length').should('eq', 3);
+  })
+
+  it('should be able to navigate to single post', () => {})
 })

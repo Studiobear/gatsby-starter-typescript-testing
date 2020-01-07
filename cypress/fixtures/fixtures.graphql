@@ -1,0 +1,14 @@
+type Post {
+  id: String @fake (type: uuid)
+  author: String @fake(type: fullName)
+  title: String @fake(type: words)
+  abstract: String @fake(type: lorem, options: {loremSize:sentences})
+  published: Boolean @examples (values: [true])
+  published_date:String @fake (type: recentDate)
+  created_date:String @fake (type: pastDate)
+}
+
+type Query {
+  posts: [Post] @listLength(min: 3, max: 3)
+  post(id: ID): Post
+}
