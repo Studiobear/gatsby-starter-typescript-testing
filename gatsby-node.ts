@@ -11,6 +11,9 @@ interface NodeProps {
   actions: any,
 }
 
+export { createPages } from './src/gatsby/create-pages';
+export { addSlugToPage as onCreateNode } from './src/gatsby/add-slug-to-page';
+
 // Making typescript --isolatedModules happy...
 export const onCreatePage = ({ page, actions }: NodeProps) => {
   if (process.env.NODE_ENV !== `production` && page.path === `/404/`) {
