@@ -26,6 +26,8 @@ interface IPageQuery {
   data: any;
 }
 
+const rawMarkup = (html: string | undefined) => html
+
 const BlogPage = ({ data }: IPageQuery) => {
   const posts = get(data, 'allMarkdownRemark', 'edges') || [];
 
@@ -41,7 +43,7 @@ const BlogPage = ({ data }: IPageQuery) => {
             slug = get(node, 'fields', 'slug') || labels.notAvailable,
             date = get(node, 'frontmatter', 'published') || labels.notAvailable,
             description = get(node, 'frontmatter', 'description') || '',
-            excerpt = get (node, 'excerpt')
+            excerpt = rawMarkup(get (node, 'excerpt'))
 
           return (
             <article key={slug}>
@@ -58,11 +60,8 @@ const BlogPage = ({ data }: IPageQuery) => {
                 <small>{date}</small>
               </header>
               <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: excerpt
-                  }}
-                />
+                <p/>
+                {excerpt}
               </section>
             </article>
           );

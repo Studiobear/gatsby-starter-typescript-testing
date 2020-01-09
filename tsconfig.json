@@ -14,5 +14,5 @@
     "noImplicitReturns": true
   },
   "exclude": ["node_modules", "public", ".cache"],
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "./node_modules/jest-dom", "./node_modules/@testing-library/jest-dom/extend-expect.d.ts"]
 }

@@ -139,7 +139,6 @@ A variety of docs and other sources were used to help build this starter.
 - [Ionic Framework](https://ionicframework.com/docs/) - docs for react components, developing PWAs and using Ionic-flavored Native APIs.
 - [Jest](https://jestjs.io/docs/en/getting-started) - docs for unit testing.
 - [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file) - docs and more for writing our end-to-end tests.
-- [GraphQL Faker](https://github.com/APIs-guru/graphql-faker) - Easily generate fixtures for your cypress integration tests.
 - [Typescript](https://www.typescriptlang.org/docs/home.html) - docs for typing.
 - [Gatsby Typescript Blog](https://github.com/assainov/gatsby-extensive-starter-typescript) - and it's related exploratory blog series [Migrating Gatsby to Typescript](https://www.extensive.one/migrating-gatsby-to-typescript-introduction/)
 - [Axe-core](https://github.com/dequelabs/axe-core) - accessibility tools provided by Dequelabs. [Docs](https://github.com/dequelabs/axe-core/tree/develop/doc) + [rules](https://dequeuniversity.com/rules/axe/3.4) explained deeper on dequeuniveristy.com
