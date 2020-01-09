@@ -5,12 +5,12 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
 import { IPageProps } from '../types/page-props';
-import { INode } from '../gatsby/create-pages';
+import { IContext  } from '../gatsby/create-pages';
 
 interface ITemplateProps {
   pageContext: {
-    next: INode;
-    previous: INode;
+    next: IContext;
+    previous: IContext;
     slug: string;
   };
 }
@@ -18,7 +18,6 @@ interface ITemplateProps {
 class BlogPostTemplate extends React.Component<IPageQuery & IPageProps & ITemplateProps> {
   render(): JSX.Element {
     const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
 
     return (
@@ -41,7 +40,7 @@ class BlogPostTemplate extends React.Component<IPageQuery & IPageProps & ITempla
                 marginBottom: rhythm(1),
               }}
             >
-              {post.frontmatter.date}
+              {post.frontmatter.published}
             </p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -98,7 +97,7 @@ interface IPageQuery {
       html: string;
       frontmatter: {
         title: string;
-        date: string;
+        published: string;
         description: string;
       };
     };
@@ -118,7 +117,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        published(formatString: "MMMM DD, YYYY")
         description
       }
     }

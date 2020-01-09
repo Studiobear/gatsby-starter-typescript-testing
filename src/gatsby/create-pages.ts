@@ -13,12 +13,26 @@ export interface IEdge {
 }
 
 export interface INode {
-  fields: {
-    slug: string;
+  node: {
+    excerpt: string
+    fields: {
+      slug: string;
+    };
+    frontmatter: {
+      title: string;
+      published: string;
+      description: string;
+    };
   };
-  frontmatter: {
-    title: string;
-  };
+}
+
+export interface IContext {
+    fields: {
+      slug: string;
+    };
+    frontmatter: {
+      title: string;
+    };
 }
 
 interface IQueryResult {
@@ -41,7 +55,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   const result = await graphql<IQueryResult>(
     `
       {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+        allMarkdownRemark(sort: { fields: [frontmatter___published], order: DESC }, limit: 1000) {
           edges {
             node {
               fields {
@@ -49,6 +63,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
               }
               frontmatter {
                 title
+                published
+                description
               }
             }
           }
