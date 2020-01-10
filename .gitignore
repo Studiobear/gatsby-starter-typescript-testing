@@ -54,6 +54,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# workspace
+.vscode
+
 # gatsby files
 .cache/
 public

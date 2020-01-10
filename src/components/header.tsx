@@ -1,6 +1,6 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { navigate } from "gatsby"
+import PropTypes from 'prop-types'
+import React from 'react'
+import { navigate } from 'gatsby'
 
 import { IonHeader, IonTitle, IonToolbar, IonButtons, IonButton, IonBackButton, IonIcon } from '@ionic/react'
 
@@ -10,20 +10,20 @@ interface Props {
 
 const Header = ({ siteTitle }: Props) => (
   <IonHeader>
-    <a className="skip-link" href="#content">Skip to main content</a>
+    <a className="skip-link" href="#content">
+      Skip to main content
+    </a>
     <IonToolbar role="navigation">
       <IonButtons slot="start">
         <IonBackButton defaultHref="/" />
       </IonButtons>
-      <IonTitle>
-        {siteTitle}
-      </IonTitle>
+      <IonTitle>{siteTitle}</IonTitle>
       <IonButtons slot="end">
-        <IonButton color="primary" onClick={() => navigate("/")}>
+        <IonButton color="primary" onClick={() => navigate('/')} data-testid="header-nav">
           <IonIcon name="home" />
           Home
         </IonButton>
-        <IonButton color="primary" onClick={() => navigate("/blog")}>
+        <IonButton color="primary" onClick={() => navigate('/blog')} data-testid="header-nav">
           Blog
         </IonButton>
       </IonButtons>

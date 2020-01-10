@@ -16,5 +16,5 @@ module.exports = {
   },
   testURL: `http://localhost`,
   setupFiles: [`<rootDir>/config/jest/loadershim.js`],
-  setupFilesAfterEnv: ['<rootDir>/config/jest/setup.ts']
+  setupFilesAfterEnv: ['<rootDir>/config/jest/setup.ts'],
 }

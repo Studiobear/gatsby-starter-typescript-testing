@@ -1,11 +1,9 @@
 ---
 title: An Introduction the the Gatsby Ionic Starter
-created: "2019-07-01T22:12:03.284Z"
-published: "2019-08-01T22:12:03.284Z"
-description: "An overview of the gatsby ionic starter"
+created: '2019-07-01T22:12:03.284Z'
+published: '2019-08-01T22:12:03.284Z'
+description: 'An overview of the gatsby ionic starter'
 ---
-
-
 
 Oh, and here's a great quote from this Wikipedia on
 [salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
