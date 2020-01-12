@@ -5,14 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { ReactNode } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { ReactNode } from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
 import { IonApp, IonPage, IonContent, IonFooter, IonToolbar, IonTitle } from '@ionic/react'
 // import classNames from 'classnames'
 
-import Header from "./header"
-import "./layout.css"
+import Header from './header'
+import './layout.css'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -33,12 +33,44 @@ import '@ionic/react/css/display.css'
 /* Global style override */
 import '../styles/overrides.css'
 
-interface Props { 
+interface LayoutProps {
   children: ReactNode
 }
 
-const Layout = ({ children }: Props) => {
-  const data = useStaticQuery(graphql`
+interface LayoutData {
+  site: {
+    siteMetadata: {
+      title: string
+    }
+  }
+}
+
+interface PureLayoutWithData extends LayoutProps {
+  data: LayoutData
+}
+
+export const PureLayout: React.SFC<PureLayoutWithData> = ({ data, children }) => (
+  <IonApp>
+    <IonPage>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <IonContent className={'ion-padding'} id="content" data-testid="main">
+        {children}
+      </IonContent>
+      <IonFooter data-testid="contentinfo">
+        <IonToolbar>
+          <IonTitle size="small">
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </IonTitle>
+        </IonToolbar>
+      </IonFooter>
+    </IonPage>
+  </IonApp>
+)
+
+export const Layout = ({ children }: LayoutProps) => {
+  const data: LayoutData = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -48,25 +80,7 @@ const Layout = ({ children }: Props) => {
     }
   `)
 
-  return (
-    <IonApp>
-      <IonPage>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <IonContent className={'ion-padding'} id="content">
-          {children}
-        </IonContent>
-        <IonFooter>
-          <IonToolbar>
-            <IonTitle size="small">
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </IonTitle>
-          </IonToolbar>
-        </IonFooter>
-      </IonPage>
-    </IonApp>
-  )
+  return <PureLayout data={data}>{children}</PureLayout>
 }
 
 Layout.propTypes = {

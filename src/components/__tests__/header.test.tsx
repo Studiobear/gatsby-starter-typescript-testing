@@ -10,7 +10,7 @@ describe('Header', () => {
     expect(getByText('Gatsby Starter Ionic')).toBeInTheDocument()
   })
   it('render two nav buttons', () => {
-    const { getByText } = render(<Header siteTitle="Gatsby Starter Ionic" />)
-    expect(queryAllByTestId('todo-item').length).toBe(2)
+    const { queryAllByTestId } = render(<Header siteTitle="Gatsby Starter Ionic" />)
+    expect(queryAllByTestId('header-nav').length).toBe(2)
   })
 })

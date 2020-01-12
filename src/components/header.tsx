@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Header = ({ siteTitle }: Props) => (
-  <IonHeader>
+  <IonHeader data-testid="banner">
     <a className="skip-link" href="#content">
       Skip to main content
     </a>
