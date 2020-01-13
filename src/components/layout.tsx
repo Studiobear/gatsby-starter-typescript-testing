@@ -1,12 +1,4 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React, { ReactNode } from 'react'
-import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { IonApp, IonPage, IonContent, IonFooter, IonToolbar, IonTitle } from '@ionic/react'
 // import classNames from 'classnames'
@@ -34,28 +26,15 @@ import '@ionic/react/css/display.css'
 import '../styles/overrides.css'
 
 interface LayoutProps {
+  title: string
   children: ReactNode
 }
 
-interface LayoutData {
-  site: {
-    siteMetadata: {
-      title: string
-    }
-  }
-}
-
-interface PureLayoutWithData extends LayoutProps {
-  data: LayoutData
-}
-
-export const PureLayout: React.SFC<PureLayoutWithData> = ({ data, children }) => (
+export const Layout = ({ title, children }: LayoutProps) => (
   <IonApp>
     <IonPage>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <IonContent className={'ion-padding'} id="content" data-testid="main">
-        {children}
-      </IonContent>
+      <Header siteTitle={title} />
+      <IonContent className={'ion-padding'}>{children}</IonContent>
       <IonFooter data-testid="contentinfo">
         <IonToolbar>
           <IonTitle size="small">
@@ -68,23 +47,5 @@ export const PureLayout: React.SFC<PureLayoutWithData> = ({ data, children }) =>
     </IonPage>
   </IonApp>
 )
-
-export const Layout = ({ children }: LayoutProps) => {
-  const data: LayoutData = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return <PureLayout data={data}>{children}</PureLayout>
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

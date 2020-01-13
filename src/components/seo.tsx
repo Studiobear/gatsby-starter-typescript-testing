@@ -5,19 +5,19 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { useStaticQuery, graphql } from 'gatsby'
 
 // import { SeoQuery } from './__generated__/SeoQuery';
-import { DeepPropertyAccess } from '../utils/deep-property-access';
-import labels from '../../content/website/labels';
+import { DeepPropertyAccess } from '../utils/deep-property-access'
+import labels from '../../content/website/labels'
 
 interface IProps {
-  description?: string;
-  lang?: string;
-  meta?: any[]; // eslint-disable-line
-  title: string;
+  description?: string
+  lang?: string
+  meta?: any[] // eslint-disable-line
+  title: string
 }
 
 const SEO: React.FC<IProps> = ({ description = ``, lang = `en`, meta = [], title }) => {
@@ -33,14 +33,16 @@ const SEO: React.FC<IProps> = ({ description = ``, lang = `en`, meta = [], title
         }
       }
     `,
-  );
+  )
 
-  const siteDescription = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'description') || labels.notAvailable;
-  const siteTitle = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'title') || labels.notAvailable;
-  const siteAuthor = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'author') || labels.notAvailable;
+  const helmetContext = {}
 
-  const metaDescription = description || siteDescription;
-  const pageTitle = title || siteTitle;
+  const siteDescription = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'description') || labels.notAvailable
+  const siteTitle = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'title') || labels.notAvailable
+  const siteAuthor = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'author') || labels.notAvailable
+
+  const metaDescription = description || siteDescription
+  const pageTitle = title || siteTitle
 
   return (
     <Helmet
@@ -84,7 +86,7 @@ const SEO: React.FC<IProps> = ({ description = ``, lang = `en`, meta = [], title
         },
       ].concat(meta)}
     />
-  );
-};
+  )
+}
 
-export default SEO;
+export default SEO

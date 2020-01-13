@@ -1,31 +1,34 @@
-import React from "react"
-// import { navigate } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-// import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { DeepPropertyAccess } from '../utils/deep-property-access'
 
-/* import {
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
-  IonIcon,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonListHeader
-} from '@ionic/react';
-*/
+const { get } = DeepPropertyAccess
 
-// import { compass } from 'ionicons/icons';
+export interface IPageQuery {
+  data: any
+}
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Welcome to Your Gatsby Ionic Starter</h1>
-  </Layout>
-)
+const IndexPage: React.SFC<IPageQuery> = ({ data }) => {
+  const siteTitle = get(data, 'site', 'sitemetadata', 'title') || ''
+  return (
+    <Layout title={siteTitle}>
+      <SEO title="Home" />
+      <div id="content">
+        <h1>Welcome to Your Gatsby Ionic Starter</h1>
+      </div>
+    </Layout>
+  )
+}
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query IndexPageQuery {
+    site {
+      ...SiteInformation
+    }
+  }
+`

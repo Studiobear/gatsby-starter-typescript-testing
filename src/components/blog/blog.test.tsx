@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import '@testing-library/jest-dom/extend-expect'
 import { render, cleanup } from '@testing-library/react'
 
-import { Layout } from '../layout'
+import { BlogList, BlogItem } from '../blog'
 
 describe('Layout', () => {
   const siteTitle = 'Gatsby Starter Ionic - Layout'
