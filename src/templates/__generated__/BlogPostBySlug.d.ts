@@ -7,24 +7,20 @@
 // ====================================================
 
 export interface BlogPostBySlug_site_siteMetadata {
-  __typename: "SiteSiteMetadata";
   title: string | null;
 }
 
 export interface BlogPostBySlug_site {
-  __typename: "Site";
   siteMetadata: BlogPostBySlug_site_siteMetadata | null;
 }
 
 export interface BlogPostBySlug_markdownRemark_frontmatter {
-  __typename: "MarkdownRemarkFrontmatter";
   title: string | null;
   published: any | null;
   description: string | null;
 }
 
 export interface BlogPostBySlug_markdownRemark {
-  __typename: "MarkdownRemark";
   id: string;
   excerpt: string | null;
   html: string | null;

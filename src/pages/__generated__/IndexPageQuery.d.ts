@@ -7,12 +7,10 @@
 // ====================================================
 
 export interface IndexPageQuery_site_siteMetadata {
-  __typename: "SiteSiteMetadata";
   title: string | null;
 }
 
 export interface IndexPageQuery_site {
-  __typename: "Site";
   siteMetadata: IndexPageQuery_site_siteMetadata | null;
 }
 

@@ -9,7 +9,7 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.2.37",
-    "gatsby-plugin-codegen": "^1.0.10",
+    "gatsby-plugin-codegen": "^1.0.14",
     "gatsby-plugin-manifest": "^2.2.34",
     "gatsby-plugin-offline": "^3.0.30",
     "gatsby-plugin-react-axe": "^0.3.0",

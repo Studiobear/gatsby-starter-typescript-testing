@@ -7,7 +7,6 @@
 // ====================================================
 
 export interface ImagePlaceholderQuery_placeholderImage_childImageSharp_fluid {
-  __typename: "ImageSharpFluid";
   base64: string | null;
   aspectRatio: number | null;
   src: string | null;
@@ -16,12 +15,10 @@ export interface ImagePlaceholderQuery_placeholderImage_childImageSharp_fluid {
 }
 
 export interface ImagePlaceholderQuery_placeholderImage_childImageSharp {
-  __typename: "ImageSharp";
   fluid: ImagePlaceholderQuery_placeholderImage_childImageSharp_fluid | null;
 }
 
 export interface ImagePlaceholderQuery_placeholderImage {
-  __typename: "File";
   childImageSharp: ImagePlaceholderQuery_placeholderImage_childImageSharp | null;
 }
 

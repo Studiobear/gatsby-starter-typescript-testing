@@ -5,16 +5,14 @@ import { INode } from '../../gatsby/create-pages'
 
 import BlogItem from './blog-item'
 
+import { BlogPageQuery_allMarkdownRemark } from '../../pages/__generated__/BlogPageQuery'
+
 const { get } = DeepPropertyAccess
 
-interface IBlogList {
-  posts: any
-}
-
-const BlogList = ({ posts }: IBlogList) => {
+const BlogList: React.SFC<BlogPageQuery_allMarkdownRemark> = ({ edges }) => {
   return (
     <ul>
-      {posts.map(({ node }: INode) => {
+      {edges.map(({ node }) => {
         const title = get(node, 'frontmatter', 'title') || labels.notAvailable,
           slug = get(node, 'fields', 'slug') || labels.notAvailable,
           date = get(node, 'frontmatter', 'published') || labels.notAvailable,

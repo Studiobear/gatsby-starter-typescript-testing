@@ -7,14 +7,12 @@
 // ====================================================
 
 export interface SeoQuery_site_siteMetadata {
-  __typename: "SiteSiteMetadata";
   title: string | null;
   description: string | null;
   author: string | null;
 }
 
 export interface SeoQuery_site {
-  __typename: "Site";
   siteMetadata: SeoQuery_site_siteMetadata | null;
 }
 

@@ -6,35 +6,24 @@ import { DeepPropertyAccess } from '../utils/deep-property-access'
 import { INode } from '../gatsby/create-pages'
 import { rhythm } from '../utils/typography'
 
-// import { BlogPageQuery } from './__generated__/BlogPageQuery';
-
 import Layout from '../components/layout'
-// import Image from "../components/image"
 import SEO from '../components/seo'
-
 import { IonGrid, IonRow, IonCol } from '@ionic/react'
 
-// import { compass } from 'ionicons/icons';
+import { BlogPageQuery } from './__generated__/BlogPageQuery'
+import { BlogList } from '../components/blog'
 
 const { get } = DeepPropertyAccess
 
-export interface IPageQuery {
-  data: any
-}
-
-interface ILayoutData {
-  site: {
-    siteMetadata: {
-      title: string
-    }
-  }
+export interface IBlogQuery {
+  data: BlogPageQuery
 }
 
 const rawMarkup = (html: string | undefined) => html
 
-const BlogPage: React.SFC<IPageQuery> = ({ data }) => {
-  const posts = get(data, 'allMarkdownRemark', 'edges') || []
-  const siteTitle = get(data, 'site', 'sitemetadata', 'title') || ''
+const BlogPage: React.SFC<IBlogQuery> = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges
+  const siteTitle = get(data, 'site', 'siteMetadata', 'title') || ''
 
   return (
     <Layout title={siteTitle}>
@@ -43,34 +32,9 @@ const BlogPage: React.SFC<IPageQuery> = ({ data }) => {
         <IonRow>
           <IonCol id="content">
             <h1>Welcome to the Blog</h1>
-            {posts.map(({ node }: INode) => {
-              const title = get(node, 'frontmatter', 'title') || labels.notAvailable,
-                slug = get(node, 'fields', 'slug') || labels.notAvailable,
-                date = get(node, 'frontmatter', 'published') || labels.notAvailable,
-                description = get(node, 'frontmatter', 'description') || '',
-                excerpt = rawMarkup(get(node, 'excerpt'))
-
-              return (
-                <article key={slug}>
-                  <header>
-                    <h2
-                      style={{
-                        marginBottom: rhythm(1 / 4),
-                      }}
-                    >
-                      <Link style={{ boxShadow: `none` }} to={slug}>
-                        {title}
-                      </Link>
-                    </h2>
-                    <small>{date}</small>
-                  </header>
-                  <section>
-                    <p />
-                    {excerpt}
-                  </section>
-                </article>
-              )
-            })}
+            <section>
+              <BlogList edges={posts} />
+            </section>
           </IonCol>
         </IonRow>
       </IonGrid>

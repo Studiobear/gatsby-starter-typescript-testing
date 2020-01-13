@@ -5,14 +5,16 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { DeepPropertyAccess } from '../utils/deep-property-access'
 
+import { IndexPageQuery } from './__generated__/IndexPageQuery'
+
 const { get } = DeepPropertyAccess
 
 export interface IPageQuery {
-  data: any
+  data: IndexPageQuery
 }
 
 const IndexPage: React.SFC<IPageQuery> = ({ data }) => {
-  const siteTitle = get(data, 'site', 'sitemetadata', 'title') || ''
+  const siteTitle = get(data, 'site', 'siteMetadata', 'title') || ''
   return (
     <Layout title={siteTitle}>
       <SEO title="Home" />
