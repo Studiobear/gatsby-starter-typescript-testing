@@ -1,34 +1,20 @@
 import * as React from 'react'
-import * as Gatsby from 'gatsby'
 import '@testing-library/jest-dom'
 import '@testing-library/jest-dom/extend-expect'
 import { render, cleanup } from '@testing-library/react'
 
 import { BlogList, BlogItem } from '../blog'
 
-describe('Layout', () => {
-  const siteTitle = 'Gatsby Starter Ionic - Layout'
-
+describe('Blog', () => {
   afterEach(cleanup)
 
   it('renders without crashing', () => {
-    const { getByText } = render(
-      <Layout title={siteTitle}>
-        <h1>Renders</h1>
-      </Layout>,
-    )
-    expect(getByText('Renders')).toBeInTheDocument()
+    const { queryByTestId } = render(<BlogList edges={[]} />)
+    expect(queryByTestId('blogList')).toBeVisible
   })
 
-  it('passes data and children props', () => {
-    const { getByText, queryAllByTestId } = render(
-      <Layout title={siteTitle}>
-        <h1>Passes props</h1>
-      </Layout>,
-    )
-    expect(queryAllByTestId('banner').length).toBe(1)
-    expect(queryAllByTestId('contentinfo').length).toBe(1)
-    expect(getByText('Gatsby Starter Ionic - Layout')).toBeInTheDocument()
-    expect(getByText('Passes props')).toBeInTheDocument()
+  it('displays placeholder with no posts', () => {
+    const { getByText } = render(<BlogList edges={[]} />)
+    expect(getByText('No posts found')).toBeInTheDocument()
   })
 })

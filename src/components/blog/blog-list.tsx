@@ -10,18 +10,28 @@ import { BlogPageQuery_allMarkdownRemark } from '../../pages/__generated__/BlogP
 const { get } = DeepPropertyAccess
 
 const BlogList: React.SFC<BlogPageQuery_allMarkdownRemark> = ({ edges }) => {
-  return (
-    <ul>
-      {edges.map(({ node }) => {
-        const title = get(node, 'frontmatter', 'title') || labels.notAvailable,
-          slug = get(node, 'fields', 'slug') || labels.notAvailable,
-          date = get(node, 'frontmatter', 'published') || labels.notAvailable,
-          excerpt = get(node, 'excerpt') || ''
+  if (edges.length > 0) {
+    return (
+      <ul data-testid="blogList">
+        {edges.map(({ node }) => {
+          const title = get(node, 'frontmatter', 'title') || labels.notAvailable,
+            slug = get(node, 'fields', 'slug') || labels.notAvailable,
+            date = get(node, 'frontmatter', 'published') || labels.notAvailable,
+            excerpt = get(node, 'excerpt') || ''
 
-        return <BlogItem title={title} slug={slug} date={date} excerpt={excerpt} />
-      })}
-    </ul>
-  )
+          return <BlogItem title={title} slug={slug} date={date} excerpt={excerpt} />
+        })}
+      </ul>
+    )
+  } else {
+    return (
+      <div>
+        <p>
+          <strong>No posts found</strong>
+        </p>
+      </div>
+    )
+  }
 }
 
 export default BlogList

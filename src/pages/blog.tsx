@@ -19,8 +19,6 @@ export interface IBlogQuery {
   data: BlogPageQuery
 }
 
-const rawMarkup = (html: string | undefined) => html
-
 const BlogPage: React.SFC<IBlogQuery> = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   const siteTitle = get(data, 'site', 'siteMetadata', 'title') || ''
