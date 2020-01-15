@@ -19,7 +19,9 @@ const BlogList: React.SFC<BlogPageQuery_allMarkdownRemark> = ({ edges }) => {
             date = get(node, 'frontmatter', 'published') || labels.notAvailable,
             excerpt = get(node, 'excerpt') || ''
 
-          return <BlogItem title={title} slug={slug} date={date} excerpt={excerpt} />
+          const post = { title, slug, date, excerpt }
+
+          return <BlogItem post={post} />
         })}
       </ul>
     )

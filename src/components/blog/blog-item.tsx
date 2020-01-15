@@ -4,30 +4,32 @@ import { Link } from 'gatsby'
 import { rhythm } from '../../utils/typography'
 
 interface IBlogItem {
-  title: string
-  slug: string
-  date: string
-  excerpt: string
+  post: {
+    title: string
+    slug: string
+    date: string
+    excerpt: string
+  }
 }
 
-const BlogItem = ({ title, slug, date, excerpt }: IBlogItem) => (
-  <li>
-    <article key={slug}>
+const BlogItem = ({ post }: IBlogItem) => (
+  <li data-testid="blogItem">
+    <article key={post.slug}>
       <header>
         <h2
           style={{
             marginBottom: rhythm(1 / 4),
           }}
         >
-          <Link style={{ boxShadow: `none` }} to={slug}>
-            {title}
+          <Link style={{ boxShadow: `none` }} to={post.slug}>
+            {post.title}
           </Link>
         </h2>
-        <small>{date}</small>
+        <small>{post.date}</small>
       </header>
       <section>
         <p />
-        {excerpt}
+        {post.excerpt}
       </section>
     </article>
   </li>
