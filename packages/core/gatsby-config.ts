@@ -70,7 +70,15 @@ export default {
     },
     {
       resolve: 'gatsby-plugin-codegen',
-      options: {},
+      options: {
+        localSchemaFile: './packages/core/schema.json',
+        includes: [
+          './packages/**/src/**/*.tsx',
+          './packages/**/src/**/*.ts',
+          './node_modules/gatsby-transformer-sharp/src/*.js',
+          './node_modules/gatsby-image/src/*.js',
+        ],
+      },
     },
   ],
 }
