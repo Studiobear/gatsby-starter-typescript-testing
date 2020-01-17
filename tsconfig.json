@@ -14,5 +14,11 @@
     "noImplicitReturns": true
   },
   "exclude": ["node_modules", "public", ".cache"],
-  "include": ["./src/**/*", "./node_modules/jest-dom", "./node_modules/@testing-library/jest-dom/extend-expect.d.ts"]
+  "include": [
+    "./packages/core/src/**/*",
+    "./packages/gatsby-theme-ionic/src/**/*",
+    "./packages/gatsby-theme-blog/src/**/*",
+    "./node_modules/jest-dom",
+    "./node_modules/@testing-library/jest-dom/extend-expect.d.ts"
+  ]
 }

@@ -1,3 +1,5 @@
+const baseConfig = require('./jest.config.base')
+
 module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
@@ -15,6 +17,13 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
+  projects: ['<rootDir>/packages/*'],
   setupFiles: [`<rootDir>/config/jest/loadershim.js`],
   setupFilesAfterEnv: ['<rootDir>/config/jest/setup.ts'],
+  coverageDirectory: '<rootDir>/coverage/',
+  collectCoverageFrom: ['<rootDir>/packages/*/src/**/*.{ts,tsx}'],
+  moduleNameMapper: {
+    '.json$': 'identity-obj-proxy',
+  },
+  moduleDirectories: ['node_modules'],
 }

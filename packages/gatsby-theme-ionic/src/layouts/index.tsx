@@ -1,9 +1,8 @@
 import React, { ReactNode } from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { IonApp, IonPage, IonContent, IonFooter, IonToolbar, IonTitle } from '@ionic/react'
 // import classNames from 'classnames'
 
-import Header from './header'
+import Header from '../components/header'
 import './layout.css'
 
 /* Core CSS required for Ionic components to work properly */

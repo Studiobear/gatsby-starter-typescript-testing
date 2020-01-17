@@ -1,0 +1,31 @@
+{
+  "name": "@studiobear/core",
+  "private": true,
+  "description": "A starter for Gatsby integrated with Ionic + Typescript and TDD-ready",
+  "version": "0.0.1",
+  "author": "Barry Low <barry@studiobear.co>",
+  "dependencies": {
+    "@ionic/react": "^4.11.7",
+    "classnames": "^2.2.6",
+    "gatsby": "^2.18.17",
+    "gatsby-plugin-codegen": "^1.0.14",
+    "gatsby-plugin-manifest": "^2.2.34",
+    "gatsby-plugin-offline": "^3.0.30",
+    "gatsby-plugin-typescript": "^2.1.23",
+    "gatsby-source-filesystem": "^2.1.43",
+    "ionicons": "^4.6.3",
+    "prismjs": "^1.18.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  }
+}
