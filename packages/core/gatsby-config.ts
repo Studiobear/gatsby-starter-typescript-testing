@@ -48,7 +48,7 @@ export default {
     {
       resolve: 'gatsby-plugin-codegen',
       options: {
-        localSchemaFile: './packages/core/schema.json',
+        localSchemaFile: './schema.json',
         includes: [
           './packages/**/src/**/*.tsx',
           './packages/**/src/**/*.ts',

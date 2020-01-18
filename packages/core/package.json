@@ -4,9 +4,10 @@
   "description": "A starter for Gatsby integrated with Ionic + Typescript and TDD-ready",
   "version": "0.0.1",
   "author": "Barry Low <barry@studiobear.co>",
+  "main":"src",
   "dependencies": {
     "@ionic/react": "^4.11.7",
-    "@studiobear/gatsby-theme-ionic": "file:../gatsby-theme-ionic",
+    "@studiobear/gatsby-theme-ionic": "^0.0.2",
     "classnames": "^2.2.6",
     "gatsby": "^2.18.17",
     "gatsby-plugin-codegen": "^1.0.14",

@@ -7,11 +7,6 @@
 
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useStaticQuery, graphql } from 'gatsby'
-
-// import { SeoQuery } from './__generated__/SeoQuery';
-import { DeepPropertyAccess } from '@studiobear/core/utils/deep-property-access'
-import labels from '@studiobear/core/content/website/labels'
 
 interface SEOProps {
   siteMeta: {
@@ -31,22 +26,22 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({ siteMeta, pageMeta, meta }) => (
   <Helmet
     htmlAttributes={{
-      lang,
+      lang: siteMeta.lang,
     }}
-    title={pageTitle}
-    titleTemplate={`%s | ${siteTitle}`}
+    title={pageMeta.title}
+    titleTemplate={`%s | ${siteMeta.title}`}
     meta={[
       {
         name: `description`,
-        content: metaDescription,
+        content: siteMeta.description,
       },
       {
         property: `og:title`,
-        content: pageTitle,
+        content: pageMeta.title,
       },
       {
         property: `og:description`,
-        content: metaDescription,
+        content: siteMeta.description,
       },
       {
         property: `og:type`,
@@ -58,15 +53,15 @@ const SEO: React.FC<SEOProps> = ({ siteMeta, pageMeta, meta }) => (
       },
       {
         name: `twitter:creator`,
-        content: siteAuthor,
+        content: siteMeta.author,
       },
       {
         name: `twitter:title`,
-        content: pageTitle,
+        content: pageMeta.title,
       },
       {
         name: `twitter:description`,
-        content: metaDescription,
+        content: pageMeta.description,
       },
     ].concat(meta)}
   />

@@ -1,13 +1,10 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import labels from '../../content/website/labels'
-import { DeepPropertyAccess } from '../utils/deep-property-access'
-import { INode } from '../gatsby/create-pages'
-import { rhythm } from '../utils/typography'
+import { DeepPropertyAccess } from '@studiobear/core/src/utils/deep-property-access'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '@studiobear/gatsby-theme-ionic/src/layouts'
+import SEO from '@studiobear/core/src/components/seoData'
 import { IonGrid, IonRow, IonCol } from '@ionic/react'
 
 import { BlogPageQuery } from './__generated__/BlogPageQuery'

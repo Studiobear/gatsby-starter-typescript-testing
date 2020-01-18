@@ -1,24 +1,7 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "esnext",
-    "jsx": "react",
-    "lib": ["dom", "esnext"],
-    "strict": true,
-    "noEmit": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "allowJs": true,
-    "noImplicitReturns": true
+    "composite": true
   },
-  "exclude": ["node_modules", "public", ".cache"],
-  "include": [
-    "./packages/core/src/**/*",
-    "./packages/gatsby-theme-ionic/src/**/*",
-    "./packages/gatsby-theme-blog/src/**/*",
-    "./node_modules/jest-dom",
-    "./node_modules/@testing-library/jest-dom/extend-expect.d.ts"
-  ]
+  "files": [],
+  "include": []
 }

@@ -5,7 +5,7 @@ import { render, cleanup } from '@testing-library/react'
 
 import { BlogList, BlogItem } from '../blog'
 
-import { noPosts, allPosts, aPost } from '../../../__mocks__/blog.fixture'
+import { noPosts, allPosts, aPost } from '../../../../../__mocks__/blog.fixture'
 
 describe('Blog', () => {
   afterEach(cleanup)

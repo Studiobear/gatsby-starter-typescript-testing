@@ -857,7 +857,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.8.3"
     "@babel/plugin-transform-react-jsx-source" "^7.8.3"
 
-"@babel/preset-typescript@^7.7.4":
+"@babel/preset-typescript@^7.3.3", "@babel/preset-typescript@^7.7.4":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.8.3.tgz#90af8690121beecd9a75d0cc26c6be39d1595d13"
   integrity sha512-qee5LgPGui9zQ0jR1TeU5/fP9L+ovoArklEqY12ek8P/wV5ZeM/VYSQYwICeoT6FfpJTekG9Ilay5PhwsOpMHA==
@@ -1623,7 +1623,7 @@
   version "0.0.1"
   dependencies:
     "@ionic/react" "^4.11.7"
-    "@studiobear/gatsby-theme-ionic" "file:../../../../Library/Caches/Yarn/v6/npm-@studiobear-core-0.0.1-035e9adc-cfea-4a6f-b76e-7391f3278942-1579240877092/node_modules/@studiobear/gatsby-theme-ionic"
+    "@studiobear/gatsby-theme-ionic" "^0.0.1"
     classnames "^2.2.6"
     gatsby "^2.18.17"
     gatsby-plugin-codegen "^1.0.14"
@@ -3011,7 +3011,7 @@ babel-extract-comments@^1.0.0:
   dependencies:
     babylon "^6.18.0"
 
-babel-jest@^24.9.0:
+babel-jest@^24.8.0, babel-jest@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-24.9.0.tgz#3fc327cb8467b89d14d7bc70e315104a783ccd54"
   integrity sha512-ntuddfyiN+EhMw58PTNL1ph4C9rECiQXjI4nMMBKBaNjXvqLdkXpPRcMSr4iyBrJg/+wz9brFUD6RhOAT6r4Iw==
@@ -3106,7 +3106,7 @@ babel-polyfill@6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-babel-preset-gatsby@^0.2.26, babel-preset-gatsby@^0.2.27:
+babel-preset-gatsby@^0.2.26, babel-preset-gatsby@^0.2.27, babel-preset-gatsby@^0.2.8:
   version "0.2.27"
   resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-0.2.27.tgz#bb2e9c35e820718932e58bdcb655afef93223493"
   integrity sha512-BXoUhKfBZUQb6nR5/fmQeNpKN137eucvRvKUGYcz9ZPbJOALSek03wseJA4zK8rV+mIQYM47y+AFs09RU/aOHg==
@@ -9419,6 +9419,22 @@ jest-pnp-resolver@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.1.tgz#ecdae604c077a7fbc70defb6d517c3c1c898923a"
   integrity sha512-pgFw2tm54fzgYvc/OHrnysABEObZCUNFnhjoRjaVOCN8NYc032/gVjPaHD4Aq6ApkSieWtfKAFQtmDKAmhupnQ==
+
+jest-preset-gatsby@^1.0.26:
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/jest-preset-gatsby/-/jest-preset-gatsby-1.0.26.tgz#8ac393285ca09fefbbfb57b6ba9c25b21948c54a"
+  integrity sha512-NJeI+Hu6f/e1BGCd0MU/R3N+E33t4mzp2IncBNY5qm31dw6DRd6EBFTWwYTXcVjxzCMtFupTYMrtN+76xaEDNw==
+  dependencies:
+    "@babel/preset-typescript" "^7.3.3"
+    babel-jest "^24.8.0"
+    babel-preset-gatsby "^0.2.8"
+    identity-obj-proxy "^3.0.0"
+    jest-raw-loader "^1.0.1"
+
+jest-raw-loader@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jest-raw-loader/-/jest-raw-loader-1.0.1.tgz#ce9f56d54650f157c4a7d16d224ba5d613bcd626"
+  integrity sha1-zp9W1UZQ8VfEp9FtIkul1hO81iY=
 
 jest-regex-util@^24.3.0, jest-regex-util@^24.9.0:
   version "24.9.0"

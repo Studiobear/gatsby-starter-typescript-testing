@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { rhythm } from '../../utils/typography'
+import { rhythm } from '@studiobear/core/src/utils/typography'
 
 interface IBlogItem {
   post: {

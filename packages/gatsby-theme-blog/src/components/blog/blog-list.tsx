@@ -1,7 +1,6 @@
 import React from 'react'
-import labels from '../../../content/website/labels'
-import { DeepPropertyAccess } from '../../utils/deep-property-access'
-import { INode } from '../../gatsby/create-pages'
+import labels from '@studiobear/core/src/content/website/labels'
+import { DeepPropertyAccess } from '@studiobear/core/src/utils/deep-property-access'
 
 import BlogItem from './blog-item'
 
