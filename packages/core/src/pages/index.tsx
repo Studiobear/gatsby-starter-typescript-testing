@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '@studiobear/gatsby-theme-ionic/src/layouts'
+import SEO from '../components/seoData'
+
 import { DeepPropertyAccess } from '../utils/deep-property-access'
 
 import { IndexPageQuery } from './__generated__/IndexPageQuery'

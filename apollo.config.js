@@ -10,7 +10,7 @@ module.exports = {
     ],
     service: {
       name: 'gatsbySchema',
-      localSchemaFile: './packages/core/schema.json',
+      localSchemaFile: './schema.json',
     },
     tagName: 'graphql',
   },

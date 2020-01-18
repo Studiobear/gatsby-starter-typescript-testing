@@ -7,7 +7,7 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { SEO } from '@studiobear/gatsby-theme-ionic'
+import SEO from '@studiobear/gatsby-theme-ionic/src/components/seo'
 
 import { DeepPropertyAccess } from '../utils/deep-property-access'
 import labels from '../content/website/labels'
