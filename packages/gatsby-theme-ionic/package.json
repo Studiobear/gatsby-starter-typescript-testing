@@ -1,13 +1,13 @@
 {
   "name": "@studiobear/gatsby-theme-ionic",
   "description": "Shared-UI components for Studiobear Gatsby Typescript + Testing",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Barry Low <barry@studiobear.co>",
   "publishConfig": {
     "access": "public"
   },
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "lib/index",
+  "typings": "lib/index",
   "files": ["lib/**/*"],
   "dependencies": {
     "@ionic/react": "^4.11.7",
