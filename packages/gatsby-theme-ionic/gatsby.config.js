@@ -1,9 +1,4 @@
-module.exports = ({
-  contentAuthors = 'content/authors',
-  contentPosts = 'content/posts',
-  pathPrefix = '',
-  sources: { local, contentful } = { local: true, contentful: false },
-}) => ({
+module.exports = () => ({
   pathPrefix,
   mapping: {
     'Mdx.frontmatter.author': `AuthorsYaml`,
@@ -14,13 +9,6 @@ module.exports = ({
     `gatsby-plugin-react-helmet-async`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: contentPosts,
-        name: contentPosts,
-      },
-    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {

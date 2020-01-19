@@ -1,12 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
-  "exclude": ["**/__tests__", "**/__mocks__"],
-  "include": ["src/**/*"],
+  "exclude": ["node_modules", "lib", "**/*.test.tsx"],
+  "include": ["./src/**/*"],
   "compilerOptions": {
+    "declaration": true,
     "composite": true,
-    "outDir": "lib",
-    "rootDir": "src",
-    "baseUrl": "src"
-  },
-  "references": [{ "path": "../core" }]
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "typeRoots": ["./src/types"],
+    "types": ["node", "react-helmet"]
+  }
 }

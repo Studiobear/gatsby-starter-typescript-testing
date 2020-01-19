@@ -56,6 +56,7 @@
     "build": "gatsby build",
     "develop": "cd packages/core && yarn develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "types:ionic": "cd packages/gatsby-theme-ionic && yarn type-build",
     "type-check": "tsc --noEmit",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -71,7 +72,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run format",
-      "pre-push": "npm run format && npm test"
+      "pre-push": "npm run format && npm test:all"
     }
   },
   "repository": {

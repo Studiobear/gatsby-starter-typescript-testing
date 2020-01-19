@@ -1,4 +1,2 @@
-import Layout from './layouts'
-import Header from './components/header'
-
-export { Layout, Header }
+export { default as Layout } from './layouts'
+export { default as Header } from './components/header'

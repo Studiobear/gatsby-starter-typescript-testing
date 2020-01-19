@@ -8,15 +8,10 @@
     "jsx": "react",
     "lib": ["dom", "esnext"],
     "strict": true,
-    "noEmit": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "allowJs": true,
-    "noImplicitReturns": true,
-    "paths": {
-      "@studiobear/*": ["packages/*/src"],
-      "*": ["node_modules", "packages"]
-    }
+    "noImplicitReturns": true
   },
   "include": ["packages", "jest-dom/extend-expect"]
 }
