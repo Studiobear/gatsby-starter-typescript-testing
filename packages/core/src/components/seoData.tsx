@@ -7,7 +7,7 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import SEO from '@studiobear/gatsby-theme-ionic/src/components/seo'
+import { SEO } from '@studiobear/shared-ui-ionic'
 
 import { DeepPropertyAccess } from '../utils/deep-property-access'
 import labels from '../content/website/labels'
@@ -35,14 +35,9 @@ const SEOData: React.FC<IProps> = ({ description = ``, lang = `en`, meta = [], t
     `,
   )
 
-  const helmetContext = {}
-
   const siteDescription = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'description') || labels.notAvailable
   const siteTitle = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'title') || labels.notAvailable
   const siteAuthor = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'author') || labels.notAvailable
-
-  const metaDescription = description || siteDescription
-  const pageTitle = title || ''
 
   const siteMeta = {
     description: siteDescription,

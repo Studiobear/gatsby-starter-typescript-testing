@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '@studiobear/gatsby-theme-ionic'
+import { Layout } from '@studiobear/shared-ui-ionic'
 import SEO from '../components/seoData'
 
 import { DeepPropertyAccess } from '../utils/deep-property-access'

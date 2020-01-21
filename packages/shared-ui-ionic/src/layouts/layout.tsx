@@ -29,11 +29,11 @@ export interface LayoutProps {
   children: ReactNode
 }
 
-export const Layout = ({ title, children }: LayoutProps) => (
+export const Layout = (props: LayoutProps) => (
   <IonApp>
     <IonPage>
-      <Header siteTitle={title} />
-      <IonContent className={'ion-padding'}>{children}</IonContent>
+      <Header siteTitle={props.title} />
+      <IonContent className={'ion-padding'}>{props.children}</IonContent>
       <IonFooter data-testid="contentinfo">
         <IonToolbar>
           <IonTitle size="small">
