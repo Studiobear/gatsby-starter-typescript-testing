@@ -3,15 +3,13 @@
     "composite": true,
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "esnext",
     "jsx": "react",
-    "lib": ["dom", "esnext"],
     "strict": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "allowJs": true,
     "noImplicitReturns": true
   },
-  "include": ["packages", "jest-dom/extend-expect"]
+  "include": ["packages", "jest-dom/extend-expect"],
+  "exclude": ["node_modules"]
 }

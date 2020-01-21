@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "exclude": ["node_modules", "dist", "**/*.test.*", "**/*.spec.*", "**/*.story.*"],
+  "include": ["src"],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "declaration": true,
+    "composite": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "typeRoots": ["src/types"],
+    "types": ["node", "react-helmet"]
+  }
+}

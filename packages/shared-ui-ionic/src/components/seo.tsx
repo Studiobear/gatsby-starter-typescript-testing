@@ -8,7 +8,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
-interface SEOProps {
+export interface SEOProps {
   siteMeta: {
     description?: string
     title: string
@@ -23,7 +23,7 @@ interface SEOProps {
   meta: any[]
 }
 
-const SEO: React.FC<SEOProps> = ({ siteMeta, pageMeta, meta }) => (
+export const SEO: React.FC<SEOProps> = ({ siteMeta, pageMeta, meta }) => (
   <Helmet
     htmlAttributes={{
       lang: siteMeta.lang,

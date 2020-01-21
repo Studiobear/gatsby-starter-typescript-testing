@@ -10,7 +10,7 @@
   "dependencies": {
     "@studiobear/core": "file:packages/core",
     "@studiobear/gatsby-theme-blog": "file:packages/gatsby-theme-blog",
-    "@studiobear/gatsby-theme-ionic": "file:packages/gatsby-theme-ionic"
+    "@studiobear/shared-ui-ionic": "file:packages/shared-ui-ionic"
   },
   "devDependencies": {
     "@testing-library/cypress": "^5.0.2",
@@ -56,7 +56,7 @@
     "build": "gatsby build",
     "develop": "cd packages/core && yarn develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "types:ionic": "cd packages/gatsby-theme-ionic && yarn type-build",
+    "types:ui": "cd packages/shared-ui-ionic && yarn type-build",
     "type-check": "tsc --noEmit",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -64,7 +64,7 @@
     "test:all": "yarn test:core --passWithNoTests && yarn test:ionic --passWithNoTests",
     "test:core": "cd packages/core && yarn test",
     "test:blog": "cd packages/gatsby-theme-blog && yarn test",
-    "test:ionic": "cd packages/gatsby-theme-ionic && yarn test",
+    "test:ui": "cd packages/shared-ui-ionic && yarn test",
     "test:watch": "yarn test --watch",
     "cy:open": "cypress open",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"

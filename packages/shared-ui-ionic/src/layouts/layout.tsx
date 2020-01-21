@@ -24,7 +24,7 @@ import '@ionic/react/css/display.css'
 /* Global style override */
 import '../styles/overrides.css'
 
-interface LayoutProps {
+export interface LayoutProps {
   title: string
   children: ReactNode
 }

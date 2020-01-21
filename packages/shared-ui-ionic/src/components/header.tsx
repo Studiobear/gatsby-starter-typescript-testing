@@ -1,14 +1,13 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import { navigate } from 'gatsby'
 
 import { IonHeader, IonTitle, IonToolbar, IonButtons, IonButton, IonBackButton, IonIcon } from '@ionic/react'
 
-interface Props {
+export interface Props {
   siteTitle: string
 }
 
-const Header = ({ siteTitle }: Props) => (
+const Header = ({ siteTitle = '' }: Props) => (
   <IonHeader data-testid="banner">
     <a className="skip-link" href="#content">
       Skip to main content
@@ -30,13 +29,5 @@ const Header = ({ siteTitle }: Props) => (
     </IonToolbar>
   </IonHeader>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
