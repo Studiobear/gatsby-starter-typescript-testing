@@ -3,7 +3,6 @@ import { IonApp, IonPage, IonContent, IonFooter, IonToolbar, IonTitle } from '@i
 // import classNames from 'classnames'
 
 import Header from '../components/header'
-import './layout.css'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -23,6 +22,7 @@ import '@ionic/react/css/display.css'
 
 /* Global style override */
 import '../styles/overrides.css'
+import '../styles/layout.css'
 
 export interface LayoutProps {
   title: string

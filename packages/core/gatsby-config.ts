@@ -1,5 +1,3 @@
-import path from 'path'
-
 export default {
   siteMetadata: {
     title: `Gatsby Starter Ionic`,
@@ -60,10 +58,8 @@ export default {
       },
     },
     {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: path.join(__dirname, `src`, `pages`),
-      },
+      resolve: `@studiobear/gatsby-theme-blog`,
+      options: {},
     },
   ],
 }

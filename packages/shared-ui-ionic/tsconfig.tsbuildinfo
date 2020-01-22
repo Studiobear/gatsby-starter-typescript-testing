@@ -534,8 +534,8 @@
         "signature": "da8937b5e860b79af69890458bdd49475ffa0d3a2c5a812a792483ce7c73808f"
       },
       "./src/layouts/layout.tsx": {
-        "version": "33029d15680596a414b172a3ddd957263c81bc053ee718553f297e1e392e2347",
-        "signature": "a9899b231c312a1e327be1408ffc6e754589930ae31259bbad636df2925af216"
+        "version": "2b93c20c76d4659e7a2c45206d93c0812c2d31ef29eb6b723a2bd30967f07af5",
+        "signature": "1644d1355cee46af44f0ac712880ece23a365bbfde3176a97e58814111f02356"
       },
       "./src/layouts/index.ts": {
         "version": "85e49beb4aeb0d6d22cb64e25e5d4632585d9b22ab843a52262a048123dae593",
@@ -3284,6 +3284,10 @@
       "./src/utils/typography.ts": [
         "../../node_modules/@types/typography/index.d.ts"
       ],
+      "./src/utils/index.ts": [
+        "./src/utils/deep-property-access.ts",
+        "./src/utils/typography.ts"
+      ],
       "./src/index.ts": [
         "./src/layouts/index.ts",
         "./src/components/index.ts",
@@ -3666,10 +3670,6 @@
         "../../node_modules/@types/node/ts3.2/globals.d.ts",
         "../../node_modules/@types/node/fs.d.ts",
         "../../node_modules/@types/node/util.d.ts"
-      ],
-      "./src/utils/index.ts": [
-        "./src/utils/deep-property-access.ts",
-        "./src/utils/typography.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -3814,6 +3814,8 @@
       "./src/components/index.ts",
       "./src/utils/deep-property-access.ts",
       "../../node_modules/@types/typography/index.d.ts",
+      "./src/utils/typography.ts",
+      "./src/utils/index.ts",
       "./src/components/__generated__/imageplaceholderquery.d.ts",
       "./src/components/__generated__/seoquery.d.ts",
       "./src/types/declarations.d.ts",
@@ -3863,10 +3865,8 @@
       "../../node_modules/@types/node/ts3.2/globals.d.ts",
       "../../node_modules/@types/node/ts3.2/index.d.ts",
       "./src/layouts/layout.tsx",
-      "./src/utils/typography.ts",
-      "./src/utils/index.ts",
-      "./src/index.ts",
-      "./src/layouts/index.ts"
+      "./src/layouts/index.ts",
+      "./src/index.ts"
     ]
   },
   "version": "3.7.4"

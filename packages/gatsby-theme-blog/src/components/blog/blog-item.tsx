@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { rhythm } from '@studiobear/core/src/utils/typography'
+import { rhythm } from '@studiobear/shared-ui-ionic'
 
 export interface IBlogItem {
   post: {

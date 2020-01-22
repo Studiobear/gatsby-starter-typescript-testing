@@ -1,6 +1,6 @@
 import React from 'react'
 import labels from '@studiobear/core/src/content/website/labels'
-import { DeepPropertyAccess } from '@studiobear/core/src/utils/deep-property-access'
+import { DeepPropertyAccess } from '@studiobear/share-ui-ionic'
 
 import BlogItem from './blog-item'
 

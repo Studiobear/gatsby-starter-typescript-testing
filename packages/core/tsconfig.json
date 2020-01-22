@@ -1,9 +1,9 @@
 {
   "extends": "../../tsconfig.base.json",
-  "exclude": ["**/__tests__", "**/__mocks__"],
+  "exclude": ["./public", "./.cache", "**/__tests__", "**/__mocks__"],
   "include": ["src/**/*"],
   "compilerOptions": {
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "target": "esnext",
@@ -11,10 +11,9 @@
     "declaration": true,
     "rootDir": "src",
     "baseUrl": ".",
-    "typeRoots": ["src/types"],
+    "typeRoots": ["src/types", "../../../node_modules/@types"],
     "composite": true,
-    "noEmit": true,
-    "types": ["node"]
+    "noEmit": true
   },
   "references": [{ "path": "../shared-ui-ionic" }, { "path": "../gatsby-theme-blog" }]
 }

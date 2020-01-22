@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/shared-ui-ionic",
   "description": "Shared-UI Ionic components for Studiobear Gatsby Typescript + Testing",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": "Barry Low <barry@studiobear.co>",
   "publishConfig": {
     "access": "public"
@@ -28,8 +28,9 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "type-check": "tsc --noEmit",
-    "type-build": "tsc && tsc --build tsconfig.esm.json",
-    "start": "npm run develop",
+    "type-build": "tsc && tsc --build tsconfig.esm.json && yarn copy-styles",
+    "copy-styles": "rm -rf ./dist/styles & rm -rf ./dist-esm/styles && cp -Rf ./src/styles ./dist/styles && cp -Rf ./src/styles ./dist-esm/styles",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "jest",
     "test:watch": "npm test -- --watch",

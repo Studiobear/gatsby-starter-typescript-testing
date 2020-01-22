@@ -1,3 +1,5 @@
+import path from 'path'
+
 module.exports = ({
   contentImages = 'content/images',
   contentBlog = 'content/blog',
@@ -38,6 +40,12 @@ module.exports = ({
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: path.join(__dirname, `src`, `pages`),
       },
     },
   ],

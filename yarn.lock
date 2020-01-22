@@ -63,7 +63,7 @@
     invariant "^2.2.4"
     semver "^5.5.0"
 
-"@babel/core@^7.1.0", "@babel/core@^7.7.5":
+"@babel/core@^7.1.0", "@babel/core@^7.7.5", "@babel/core@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.8.3.tgz#30b0ebb4dd1585de6923a0b4d179e0b9f5d82941"
   integrity sha512-4XFkf8AwyrEG7Ziu3L2L0Cv+WyY47Tcsp70JFmpftbAA1K7YL/sgE9jh9HyNj08Y/U50ItUchpN0w6HxAoX1rA==
@@ -1623,12 +1623,13 @@
   version "0.0.1"
   dependencies:
     "@ionic/react" "^4.11.7"
-    "@studiobear/shared-ui-ionic" "^0.0.1"
+    "@studiobear/shared-ui-ionic" "^0.0.2"
     classnames "^2.2.6"
     gatsby "^2.18.17"
     gatsby-plugin-codegen "^1.0.14"
     gatsby-plugin-manifest "^2.2.34"
     gatsby-plugin-offline "^3.0.30"
+    gatsby-plugin-page-creator "^2.1.38"
     gatsby-plugin-typescript "^2.1.23"
     gatsby-source-filesystem "^2.1.43"
     ionicons "^4.6.3"
@@ -1640,8 +1641,8 @@
   version "0.0.1"
   dependencies:
     "@ionic/react" "^4.11.7"
+    "@studiobear/shared-ui-ionic" "^0.0.2"
     classnames "^2.2.6"
-    gatsby "^2.18.17"
     gatsby-image "^2.2.37"
     gatsby-plugin-codegen "^1.0.14"
     gatsby-plugin-manifest "^2.2.34"
@@ -1660,15 +1661,13 @@
     gatsby-transformer-sharp "^2.3.9"
     ionicons "^4.6.3"
     prismjs "^1.18.0"
-    react "^16.12.0"
-    react-dom "^16.12.0"
     react-helmet-async "^1.0.4"
     react-typography "^0.16.19"
     typography "^0.16.19"
     typography-theme-github "^0.16.19"
 
 "@studiobear/shared-ui-ionic@file:packages/shared-ui-ionic":
-  version "0.0.1"
+  version "0.0.2"
   dependencies:
     "@ionic/react" "^4.11.7"
     classnames "^2.2.6"
