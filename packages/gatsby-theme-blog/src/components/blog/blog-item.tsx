@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import { rhythm } from '@studiobear/core/src/utils/typography'
 
-interface IBlogItem {
+export interface IBlogItem {
   post: {
     title: string
     slug: string
@@ -12,7 +12,7 @@ interface IBlogItem {
   }
 }
 
-const BlogItem = ({ post }: IBlogItem) => (
+export const BlogItem = ({ post }: IBlogItem) => (
   <li data-testid="blogItem">
     <article key={post.slug}>
       <header>

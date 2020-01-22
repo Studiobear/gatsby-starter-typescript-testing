@@ -9,12 +9,12 @@
     "target": "esnext",
     "jsx": "react",
     "declaration": true,
-    "outDir": "dist",
     "rootDir": "src",
     "baseUrl": ".",
     "typeRoots": ["src/types"],
     "composite": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": ["node"]
   },
-  "references": [{ "path": "../gatsby-theme-ionic" }, { "path": "../gatsby-theme-blog" }]
+  "references": [{ "path": "../shared-ui-ionic" }, { "path": "../gatsby-theme-blog" }]
 }

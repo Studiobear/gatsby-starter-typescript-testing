@@ -6,7 +6,8 @@
     "composite": true,
     "outDir": "lib",
     "rootDir": "src",
-    "baseUrl": "src"
-  },
-  "references": [{ "path": "../gatsby-theme-ionic" }]
+    "baseUrl": "src",
+    "target": "esnext",
+    "module": "esnext"
+  }
 }

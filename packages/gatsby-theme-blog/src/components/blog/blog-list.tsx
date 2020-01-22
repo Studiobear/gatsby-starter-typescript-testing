@@ -8,7 +8,7 @@ import { BlogPageQuery_allMarkdownRemark } from '../../pages/__generated__/BlogP
 
 const { get } = DeepPropertyAccess
 
-const BlogList: React.SFC<BlogPageQuery_allMarkdownRemark> = ({ edges }) => {
+export const BlogList: React.SFC<BlogPageQuery_allMarkdownRemark> = ({ edges }) => {
   if (edges.length > 0) {
     return (
       <ul data-testid="blogList">

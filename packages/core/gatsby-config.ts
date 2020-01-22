@@ -1,3 +1,5 @@
+import path from 'path'
+
 export default {
   siteMetadata: {
     title: `Gatsby Starter Ionic`,
@@ -12,7 +14,7 @@ export default {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `src/images`,
       },
     },
     {
@@ -55,6 +57,12 @@ export default {
           './node_modules/gatsby-transformer-sharp/src/*.js',
           './node_modules/gatsby-image/src/*.js',
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: path.join(__dirname, `src`, `pages`),
       },
     },
   ],
