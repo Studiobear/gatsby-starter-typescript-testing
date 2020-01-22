@@ -1,14 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { DeepPropertyAccess } from '@studiobear/core/src/utils/deep-property-access'
-
-import Layout from '@studiobear/gatsby-theme-ionic/src/layouts'
-import SEO from '@studiobear/core/src/components/seoData'
+import { Layout, SEO, DeepPropertyAccess } from '@studiobear/share-ui-ionic'
 import { IonGrid, IonRow, IonCol } from '@ionic/react'
 
 import { BlogPageQuery } from './__generated__/BlogPageQuery'
-import { BlogList } from '../components/blog'
+import { BlogList } from '../components/blog/blog-list'
 
 const { get } = DeepPropertyAccess
 

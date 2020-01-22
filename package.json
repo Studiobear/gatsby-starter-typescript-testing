@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-ionic",
+  "name": "gatsby-starter-typescript-testing",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -81,10 +81,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/studiobear/gatsby-starter-ionic.git"
+    "url": "https://gitlab.com/studiobear/gatsby-starter-typescript-testing.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/studiobear/gatsby-starter-ionic/issues"
+    "url": "https://gitlab.com/studiobear/gatsby-starter-typescript-testing/issues"
   },
   "engines": {
     "node": "10.16.0"

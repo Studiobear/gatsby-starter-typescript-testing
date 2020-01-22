@@ -1,5 +1,7 @@
 import { GatsbyNode } from 'gatsby'
 
+declare var require: any
+
 export interface IEdge {
   node: {
     fields: {
