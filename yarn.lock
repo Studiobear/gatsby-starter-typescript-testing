@@ -1623,7 +1623,8 @@
   version "0.0.1"
   dependencies:
     "@ionic/react" "^4.11.7"
-    "@studiobear/shared-ui-ionic" "^0.0.2"
+    "@studiobear/gatsby-theme-blog" "0.0.2"
+    "@studiobear/shared-ui-ionic" "^0.0.4"
     classnames "^2.2.6"
     gatsby "^2.18.17"
     gatsby-plugin-codegen "^1.0.14"
@@ -1638,15 +1639,16 @@
     react-dom "^16.12.0"
 
 "@studiobear/gatsby-theme-blog@file:packages/gatsby-theme-blog":
-  version "0.0.1"
+  version "0.0.2"
   dependencies:
     "@ionic/react" "^4.11.7"
-    "@studiobear/shared-ui-ionic" "^0.0.2"
+    "@studiobear/shared-ui-ionic" "^0.0.4"
     classnames "^2.2.6"
     gatsby-image "^2.2.37"
     gatsby-plugin-codegen "^1.0.14"
     gatsby-plugin-manifest "^2.2.34"
     gatsby-plugin-offline "^3.0.30"
+    gatsby-plugin-page-creator "^2.1.38"
     gatsby-plugin-react-axe "^0.3.0"
     gatsby-plugin-react-helmet-async "^1.0.13"
     gatsby-plugin-sharp "^2.3.10"
@@ -1667,7 +1669,7 @@
     typography-theme-github "^0.16.19"
 
 "@studiobear/shared-ui-ionic@file:packages/shared-ui-ionic":
-  version "0.0.2"
+  version "0.0.4"
   dependencies:
     "@ionic/react" "^4.11.7"
     classnames "^2.2.6"
@@ -1886,6 +1888,11 @@
   version "13.1.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.7.tgz#db51d28b8dfacfe4fb2d0da88f5eb0a2eca00675"
   integrity sha512-HU0q9GXazqiKwviVxg9SI/+t/nAsGkvLDkIdxz+ObejG2nX6Si00TeLqHMoS+a/1tjH7a8YpKVQwtgHuMQsldg==
+
+"@types/node@^13.1.8":
+  version "13.1.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.8.tgz#1d590429fe8187a02707720ecf38a6fe46ce294b"
+  integrity sha512-6XzyyNM9EKQW4HKuzbo/CkOIjn/evtCmsU+MUM1xDfJ+3/rNjBttM1NgN7AOQvN6tP1Sl1D1PIKMreTArnxM9A==
 
 "@types/node@^7.0.11":
   version "7.10.9"

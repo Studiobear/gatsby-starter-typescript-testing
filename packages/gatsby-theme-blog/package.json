@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/gatsby-theme-blog",
   "description": "Studiobear Gatsby theme that adds a markdown-source blog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Barry Low <barry@studiobear.co>",
   "main": "index.js",
   "publishConfig": {

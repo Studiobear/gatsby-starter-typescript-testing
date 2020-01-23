@@ -6,10 +6,11 @@
 
 // import { GatsbyNode } from 'gatsby';
 
-export * from './src/gatsby'
+exports.createPages = require('./src/gatsby/create-pages')
+exports.addSlugToPage = require('./src/gatsby/add-slug-to-page')
 
 // Making typescript --isolatedModules happy...
-export const onCreatePage = ({ page, actions }) => {
+exports.onCreatePage = ({ page, actions }) => {
   if (process.env.NODE_ENV !== `production` && page.path === `/404/`) {
     const { createPage } = actions
     // Make the 404 page match everything client side.
