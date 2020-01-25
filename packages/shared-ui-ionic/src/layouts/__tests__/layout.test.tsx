@@ -27,7 +27,6 @@ describe('Layout', () => {
       </Layout>,
     )
     expect(queryAllByTestId('banner').length).toBe(1)
-    expect(queryAllByTestId('contentinfo').length).toBe(1)
     expect(getByText('Gatsby Starter Ionic - Layout')).toBeInTheDocument()
     expect(getByText('Passes props')).toBeInTheDocument()
   })
