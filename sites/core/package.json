@@ -7,7 +7,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@ionic/react": "^4.11.7",
-    "@studiobear/shared-ui-ionic": "^0.0.6",
+    "@studiobear/shared-ui-ionic": "^0.0.7",
     "classnames": "^2.2.6",
     "gatsby": "^2.19.5",
     "gatsby-plugin-codegen": "^1.0.14",
