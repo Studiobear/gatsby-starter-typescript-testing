@@ -8,7 +8,7 @@ export interface Props {
   siteTitle: string
 }
 
-const Header = ({ siteTitle = '' }: Props) => (
+export const Header = ({ siteTitle = '' }: Props) => (
   <IonHeader data-testid="banner">
     <a className="skip-link" href="#content">
       Skip to main content

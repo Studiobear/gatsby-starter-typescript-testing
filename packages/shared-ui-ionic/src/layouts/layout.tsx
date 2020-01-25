@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import { IonApp, IonPage, IonContent, IonFooter, IonToolbar, IonTitle } from '@ionic/react'
 // import classNames from 'classnames'
 
-import Header from '../components/header'
+import { Header, Footer } from '../components'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -34,15 +34,7 @@ export const Layout = (props: LayoutProps) => (
     <IonPage>
       <Header siteTitle={props.title} />
       <IonContent className={'ion-padding'}>{props.children}</IonContent>
-      <IonFooter data-testid="contentinfo">
-        <IonToolbar>
-          <IonTitle size="small">
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </IonTitle>
-        </IonToolbar>
-      </IonFooter>
+      <Footer />>
     </IonPage>
   </IonApp>
 )
