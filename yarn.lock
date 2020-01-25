@@ -1224,7 +1224,7 @@
     ionicons "^4.6.3"
     tslib "^1.10.0"
 
-"@ionic/react@^4.11.7":
+"@ionic/react@^4.11.10", "@ionic/react@^4.11.7":
   version "4.11.10"
   resolved "https://registry.yarnpkg.com/@ionic/react/-/react-4.11.10.tgz#33704093d8c2686e6c9a112eb29275109d5334da"
   integrity sha512-EF9H0HDb3MO/E8R2sBACYweQG2OzsHZBdxCYEHTt0lnaOCS2ykB93FK8f0WllP19e5Bx7jembZC4UugwjAxnTQ==
