@@ -1,29 +1,26 @@
 {
-  "name": "gatsby-starter-typescript-testing",
+  "name": "core",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "sites/*"
-  ],
   "description": "A starter for Gatsby integrated with Ionic + Typescript and TDD-ready",
   "version": "0.0.1",
   "author": "Barry Low <barry@studiobear.co>",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "lerna run develop --scope core",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "types:ui": "cd packages/shared-ui-ionic && yarn type-build",
-    "type-check": "tsc --noEmit",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "jest",
-    "test:all": "yarn test:core --passWithNoTests && yarn test:ionic --passWithNoTests",
-    "test:core": "cd packages/core && yarn test",
-    "test:blog": "cd packages/gatsby-theme-blog && yarn test",
-    "test:ui": "cd packages/shared-ui-ionic && yarn test",
-    "test:watch": "yarn test --watch",
-    "cy:open": "cypress open",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
+  "main": "src/index.js",
+  "dependencies": {
+    "@ionic/react": "^4.11.7",
+    "@studiobear/shared-ui-ionic": "^0.0.6",
+    "classnames": "^2.2.6",
+    "gatsby": "^2.19.5",
+    "gatsby-plugin-codegen": "^1.0.14",
+    "gatsby-plugin-manifest": "^2.2.34",
+    "gatsby-plugin-offline": "^3.0.30",
+    "gatsby-plugin-page-creator": "^2.1.38",
+    "gatsby-plugin-react-axe": "^0.3.0",
+    "gatsby-plugin-typescript": "^2.1.23",
+    "gatsby-source-filesystem": "^2.1.43",
+    "ionicons": "^4.6.3",
+    "prismjs": "^1.18.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
@@ -67,28 +64,14 @@
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"
   },
-  "keywords": [
-    "gatsby",
-    "typescript"
-  ],
-  "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format",
-      "pre-push": "npm run format && npm test:all"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.com/studiobear/gatsby-starter-typescript-testing.git"
-  },
-  "bugs": {
-    "url": "https://gitlab.com/studiobear/gatsby-starter-typescript-testing/issues"
-  },
-  "engines": {
-    "node": "10.16.0"
-  },
-  "resolutions": {
-    "cypress": "^3.8.2"
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
   }
 }

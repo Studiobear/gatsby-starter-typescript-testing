@@ -1,16 +1,17 @@
 module.exports = {
+  preset: `ts-jest`,
+  verbose: true,
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
-    '^.+\\.jsx?$': '<rootDir>/../../jest-preprocess.js',
+    '^.+\\.jsx?$': '../../jest-preprocess.js',
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$',
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
     '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/../../__mocks__/file-mock.js',
-    '^__mocks__/(.*)$': '<rootDir>/../../__mocks__/$1',
+    '^__mocks__/(.*)$': '../../__mocks__/$1',
     '.json$': 'identity-obj-proxy',
-    '^(@studiobear)(^/)(core|gatsby-theme-(?:blog|ionic)[^/]*)?((?:/.*)|$)': '<rootDir>/../../packages/$1/src$2',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: ['node_modules', 'cypress', '.cache', 'public'],
@@ -25,7 +26,6 @@ module.exports = {
       tsConfig: '<rootDir>/tsconfig.json',
     },
   },
-  testURL: 'http://localhost',
   setupFiles: [`<rootDir>/../../config/jest/loadershim.js`],
   setupFilesAfterEnv: ['<rootDir>/../../config/jest/setup.ts'],
 }

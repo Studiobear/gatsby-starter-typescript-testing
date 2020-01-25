@@ -19,17 +19,35 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', , 'prettier', 'react-hooks', 'react'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
+    project: './tsconfig.json',
   },
   rules: {
-    'react/prop-types': 'off', // Disable prop-types as we use TypeScript for type checking
+    'react/prop-types': 0, // Disable prop-types as we use TypeScript for type checking
+    'react/display-name': 1,
+    'react/jsx-uses-react': 1,
     '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx', '.tsx'],
+      },
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'warn',
+      {
+        aspects: ['invalidHref'],
+      },
+    ],
   },
   overrides: [
     // Override some TypeScript rules just for .js files
@@ -40,4 +58,8 @@ module.exports = {
       },
     },
   ],
+  globals: {
+    cy: true,
+    Cypress: true,
+  },
 }

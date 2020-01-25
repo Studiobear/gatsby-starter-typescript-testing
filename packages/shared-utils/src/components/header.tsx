@@ -20,7 +20,7 @@ const Header = ({ siteTitle = '' }: Props) => (
       <IonTitle>{siteTitle}</IonTitle>
       <IonButtons slot="end">
         <IonButton color="primary" onClick={() => navigate('/')} data-testid="header-nav">
-          <IonIcon icon={home} />
+          <IonIcon name={home.ios} />
           Home
         </IonButton>
         <IonButton color="primary" onClick={() => navigate('/blog')} data-testid="header-nav">

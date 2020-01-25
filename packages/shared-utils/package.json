@@ -1,0 +1,28 @@
+{
+  "name": "@studiobear/shared-utils",
+  "description": "Shared utilities for Studiobear",
+  "version": "0.0.1",
+  "author": "Barry Low <barry@studiobear.co>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/index",
+  "module": "./dist-esm/index",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "type-build": "tsc && tsc --build tsconfig.esm.json",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
+  }
+}
