@@ -156,3 +156,11 @@ For Mac OSX, you might get a watchman.plist error of 'service not found' or 'per
 ```
 sudo chown -R $(whoami):staff ~/Library/LaunchAgents
 ```
+
+### Running tests with Lerna
+
+**Example**
+
+```
+lerna run test:watch --scope @studiobear/shared-ui-ionic
+```

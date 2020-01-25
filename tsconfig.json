@@ -11,6 +11,6 @@
     // "skipLibCheck": true, // Use only for faster builds; hides misconfigs/conflicts
     "esModuleInterop": true
   },
-  "include": ["./apps/**/src/**/*", "./gatsby-dev/**/src/**/*", "./libs/**/src/**/*"],
-  "exclude": ["node_modules", "gatsby-dev/**/node_modules", "**/.*/"]
+  "include": ["./packages/**/src/**/*"],
+  "exclude": ["node_modules"]
 }

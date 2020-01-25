@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
-  "exclude": ["node_modules", "dist", "**/*.test.*", "**/*.spec.*", "**/*.story.*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.*", "**/*.story.*"],
   "include": ["src"],
   "compilerOptions": {
     "resolveJsonModule": true,
@@ -12,8 +12,7 @@
     "outDir": "dist",
     "rootDir": "src",
     "baseUrl": ".",
-    "typeRoots": ["src/types"],
-    "types": ["node", "react-helmet"],
+    "types": ["node", "react-helmet", "jest"],
     "tsBuildInfoFile": "./buildcache"
   }
 }
