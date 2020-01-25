@@ -1,7 +1,7 @@
 ---
 title: Gatsby Ionic Starter Features
 created: '2019-07-01T22:12:03.284Z'
-published: '2019-11-01T22:12:03.284Z'
+published: 'true'
 description: 'A look at the included opinionated features'
 ---
 
