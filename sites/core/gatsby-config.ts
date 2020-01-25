@@ -50,5 +50,6 @@ export default {
         ],
       },
     },
+    `gatsby-plugin-react-helmet-async`,
   ],
 }

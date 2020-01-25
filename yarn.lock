@@ -8548,6 +8548,11 @@ gatsby-plugin-react-axe@^0.3.0:
   dependencies:
     react-axe "^3.0.2"
 
+gatsby-plugin-react-helmet-async@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet-async/-/gatsby-plugin-react-helmet-async-1.0.14.tgz#0b156c113ce9f9fbbba46f552234b65710e1ceb4"
+  integrity sha512-Xcvbmx2lgFycnPQlIsKMypR2PVm2BDR4o3aKnPwmd1cZgf76IgNq7smUZ+pRHJRsc4SVH+8DmiECrTSC5dxqEw==
+
 gatsby-plugin-sharp@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.4.0.tgz#9df4c2646a34fb7ea4ff5428f6662ef3c0a80cde"

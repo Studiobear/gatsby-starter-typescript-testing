@@ -7,7 +7,7 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-// import { SEO } from '@studiobear/shared-ui-ionic'
+import { SEO } from '@studiobear/shared-ui-ionic'
 
 import { DeepPropertyAccess } from '../utils/deep-property-access'
 import labels from '../content/website/labels'
@@ -52,7 +52,7 @@ const SEOData: React.FC<IProps> = ({ description = ``, lang = `en`, meta = [], t
     meta,
   }
 
-  return <div>{siteMeta.description}</div>
+  return <SEO siteMeta={siteMeta} pageMeta={pageMeta} meta={meta} />
 }
 
 export default SEOData
