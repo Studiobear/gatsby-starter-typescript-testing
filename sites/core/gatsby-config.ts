@@ -10,8 +10,15 @@ export default {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `src/images`,
+        path: `content/blog`,
+        name: `content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `content/assets`,
+        name: `content/assets`,
       },
     },
     `gatsby-plugin-sharp`,
@@ -24,7 +31,7 @@ export default {
         background_color: `#FFFFFF`,
         theme_color: `#333333`,
         display: `standalone`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `content/assets/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -51,5 +58,9 @@ export default {
       },
     },
     `gatsby-plugin-react-helmet-async`,
+    {
+      resolve: `gatsby-theme-blog-core`,
+      options: {},
+    },
   ],
 }

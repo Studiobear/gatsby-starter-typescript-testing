@@ -2281,6 +2281,33 @@
     telejson "^3.2.0"
     util-deprecate "^1.0.2"
 
+"@studiobear/gatsby-theme-blog-ionic@file:packages/gatsby-theme-blog-ionic":
+  version "0.0.1"
+  dependencies:
+    "@ionic/react" "^4.11.10"
+    "@mdx-js/react" "^1.5.5"
+    "@studiobear/shared-ui-ionic" "^0.0.7"
+    "@studiobear/shared-utils" "^0.0.1"
+    gatsby-core-utils "^1.0.26"
+    gatsby-plugin-compile-es6-packages "^2.1.0"
+    gatsby-plugin-mdx "^1.0.67"
+    gatsby-plugin-page-creator "^2.1.38"
+    gatsby-plugin-react-helmet-async "^1.0.14"
+    gatsby-plugin-sharp "^2.4.0"
+    gatsby-plugin-typescript "^2.1.26"
+    gatsby-remark-copy-linked-files "^2.1.36"
+    gatsby-remark-images "^3.1.42"
+    gatsby-remark-smartypants "^2.1.20"
+    gatsby-theme-blog-core "^1.0.60"
+    gatsby-transformer-sharp "^2.3.13"
+    ionicons "^4.6.3"
+    typescript "^3.7.4"
+
+"@studiobear/shared-utils@file:packages/shared-utils":
+  version "0.0.1"
+  dependencies:
+    typescript "^3.7.4"
+
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -5524,7 +5551,7 @@ compare-versions@^3.5.1:
   resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.5.1.tgz#26e1f5cf0d48a77eced5046b9f67b6b61075a393"
   integrity sha512-9fGPIB7C6AyM18CJJBHt5EnCZDG3oiTJYy0NjfIAGjKpzv0tkxWko7TNQHF5ymqm7IH03tqmeuBxtvD+Izh6mg==
 
-compass-vertical-rhythm@^1.4.5:
+compass-vertical-rhythm@^1.2.1, compass-vertical-rhythm@^1.4.5:
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/compass-vertical-rhythm/-/compass-vertical-rhythm-1.4.5.tgz#4baa8d7068fda164d3675d706775d7547e8750f5"
   integrity sha512-bJo3IYX7xmmZCDYjrT2XolaiNjGZ4E2JvUGxpdU0ecbH4ZLK786wvc8aHKVrGrKct9JlkmJbUi8YLrQWvOc+uA==
@@ -17833,6 +17860,11 @@ typescript@^3.7.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.5.tgz#0692e21f65fd4108b9330238aac11dd2e177a1ae"
   integrity sha512-/P5lkRXkWHNAbcJIiHPfRoKqyd7bsyCma1hZNUGfn20qm64T6ZBlrzprymeu918H+mB/0rIg2gGK/BXkhhYgBw==
 
+typography-breakpoint-constants@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.yarnpkg.com/typography-breakpoint-constants/-/typography-breakpoint-constants-0.16.19.tgz#e0e89147749562cbb46ce76c47ff0f73372765e7"
+  integrity sha512-vXjfV9hwAXIOf5+U5GN137ahBkK+sj1TJu/5ksmP+8XB/D80lmGb/m0nKviWaQ3t7HLrK848VGrFS+6E2vcmVg==
+
 typography-normalize@^0.16.19:
   version "0.16.19"
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.16.19.tgz#58e0cf12466870c5b27006daa051fe7307780660"
@@ -17844,6 +17876,15 @@ typography-theme-github@^0.16.19:
   integrity sha512-kDfFjbeh2JW3buPub1JUA39AIKQrZhMuEeqJo6P+9c9JOEMLUBPvcHGrNd+wtAuZlVehPbqG6bcW6KAANHrsGw==
   dependencies:
     gray-percentage "^2.0.0"
+
+typography-theme-st-annes@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.yarnpkg.com/typography-theme-st-annes/-/typography-theme-st-annes-0.16.19.tgz#e5ac2ad7916f07bdadb3662c806f5bd537fc31e8"
+  integrity sha512-9KJ2yu5dusYQf8+T+WyEJDcZewV1R55RKNnd3AUAoqgi7MsYtIA8HjVA4hEs2Z6UBC+WueastqoHldSfPcYSWQ==
+  dependencies:
+    compass-vertical-rhythm "^1.2.1"
+    gray-percentage "^2.0.0"
+    typography-breakpoint-constants "^0.16.19"
 
 typography@^0.16.19:
   version "0.16.19"

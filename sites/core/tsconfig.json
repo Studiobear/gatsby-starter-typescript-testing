@@ -22,7 +22,6 @@
     "declaration": true,
     "rootDir": "src",
     "baseUrl": ".",
-    "typeRoots": ["src/types"],
     "noEmit": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

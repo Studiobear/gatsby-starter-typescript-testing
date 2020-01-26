@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { Layout } from '@studiobear/shared-ui-ionic'
 import SEO from '../components/seoData'
 
-import { DeepPropertyAccess } from '../utils/deep-property-access'
+import { DeepPropertyAccess } from '@studiobear/shared-utils'
 
 import { IndexPageQuery } from './__generated__/IndexPageQuery'
 

@@ -9,8 +9,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { SEO } from '@studiobear/shared-ui-ionic'
 
-import { DeepPropertyAccess } from '../utils/deep-property-access'
-import labels from '../content/website/labels'
+import { DeepPropertyAccess } from '@studiobear/shared-utils'
 
 interface IProps {
   description?: string
@@ -35,9 +34,9 @@ const SEOData: React.FC<IProps> = ({ description = ``, lang = `en`, meta = [], t
     `,
   )
 
-  const siteDescription = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'description') || labels.notAvailable
-  const siteTitle = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'title') || labels.notAvailable
-  const siteAuthor = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'author') || labels.notAvailable
+  const siteDescription = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'description') || 'N/A'
+  const siteTitle = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'title') || 'N/A'
+  const siteAuthor = DeepPropertyAccess.get(data, 'site', 'siteMetadata', 'author') || 'N/A'
 
   const siteMeta = {
     description: siteDescription,

@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/shared-ui-ionic",
   "description": "Shared-UI Ionic components for Studiobear Gatsby Typescript + Testing",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Barry Low <barry@studiobear.co>",
   "publishConfig": {
     "access": "public"
@@ -20,7 +20,8 @@
     "react-helmet-async": "^1.0.4",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
-    "typography-theme-github": "^0.16.19"
+    "typography-theme-github": "^0.16.19",
+    "typography-theme-st-annes": "^0.16.19"
   },
   "license": "MIT",
   "scripts": {
@@ -39,8 +40,5 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^5.0.15"
-  },
-  "peerDependencies": {
-    "gatsby-plugin-react-helmet-async": "^1.0.14"
   }
 }

@@ -1,7 +1,7 @@
 import Typography from 'typography'
-import Github, { IDefaultStyles } from 'typography-theme-github'
+import stAnnesTheme, { IDefaultStyles } from 'typography-theme-st-annes'
 
-Github.overrideThemeStyles = (): IDefaultStyles => {
+stAnnesTheme.overrideThemeStyles = (): IDefaultStyles => {
   return {
     'a.gatsby-resp-image-link': {
       boxShadow: `none`,
@@ -9,9 +9,9 @@ Github.overrideThemeStyles = (): IDefaultStyles => {
   }
 }
 
-delete (Github as any).googleFonts // eslint-disable-line
+delete (stAnnesTheme as any).googleFonts // eslint-disable-line
 
-const typography = new Typography(Github)
+export const typography = new Typography(stAnnesTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

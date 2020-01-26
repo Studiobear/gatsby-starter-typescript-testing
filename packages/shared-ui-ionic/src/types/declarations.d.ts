@@ -1,4 +1,4 @@
-declare module 'typography-theme-github' {
+declare module 'typography-theme-st-annes' {
   export function overrideThemeStyles(): IDefaultStyles
 
   export interface IDefaultStyles {

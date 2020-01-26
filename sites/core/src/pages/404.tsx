@@ -3,7 +3,7 @@ import React from 'react'
 import { Layout } from '@studiobear/shared-ui-ionic'
 import SEO from '../components/seoData'
 
-import { DeepPropertyAccess } from '../utils/deep-property-access'
+import { DeepPropertyAccess } from '@studiobear/shared-utils'
 
 import { IPageQuery } from './index'
 
