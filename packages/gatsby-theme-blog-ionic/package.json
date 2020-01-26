@@ -1,0 +1,64 @@
+{
+  "name": "@studiobear/gatsby-theme-blog-ionic",
+  "description": "Gatsby theme with typescript and storybook built in. Based on gatsby-theme-typescript by Mae Capozzi",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Dan Spratling",
+  "license": "MIT",
+  "keywords": [
+    "gatsby-theme",
+    "typescript",
+    "storybook"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.19.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/api": "^5.3.9",
+    "@storybook/core": "^5.3.9",
+    "@storybook/react": "^5.1.11",
+    "babel-loader": "^8.0.6",
+    "gatsby": "^2.19.5",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "regenerator-runtime": "^0.13.3",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@ionic/react": "^4.11.10",
+    "@mdx-js/mdx": "^1.5.5",
+    "@mdx-js/react": "^1.5.5",
+    "@studiobear/shared-ui-ionic": "^0.0.8",
+    "@studiobear/shared-utils": "file:../shared-utils",
+    "gatsby-core-utils": "^1.0.26",
+    "gatsby-plugin-compile-es6-packages": "^2.1.0",
+    "gatsby-plugin-mdx": "^1.0.67",
+    "gatsby-plugin-page-creator": "^2.1.38",
+    "gatsby-plugin-react-helmet-async": "^1.0.14",
+    "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-remark-copy-linked-files": "^2.1.36",
+    "gatsby-remark-images": "^3.1.42",
+    "gatsby-remark-smartypants": "^2.1.20",
+    "gatsby-theme-blog-core": "^1.0.60",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "ionicons": "^4.6.3",
+    "react-helmet-async": "^1.0.4"
+  }
+}

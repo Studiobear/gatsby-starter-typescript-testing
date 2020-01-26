@@ -58,7 +58,7 @@
     "gatsby-cypress": "^0.2.19",
     "husky": "^4.0.6",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "jest-preset-gatsby": "^1.0.26",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
