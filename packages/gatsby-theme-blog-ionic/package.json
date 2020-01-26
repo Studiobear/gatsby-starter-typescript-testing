@@ -38,6 +38,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "regenerator-runtime": "^0.13.3",
+    "ts-jest": "25.0.0",
     "typescript": "^3.7.4"
   },
   "dependencies": {
