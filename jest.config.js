@@ -13,7 +13,7 @@ module.exports = {
     '.json$': 'identity-obj-proxy',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testPathIgnorePatterns: ['node_modules', 'cypress', '.cache', 'public'],
+  testPathIgnorePatterns: ['node_modules', 'cypress', '.cache', 'public', 'dist', 'dist-esm'],
   transformIgnorePatterns: [
     'node_modules/(?!(gatsby|@ionic|ionicons)/)',
     '<rootDir>/node_modules/(?!(gatsby|@ionic|ionicons)/)',

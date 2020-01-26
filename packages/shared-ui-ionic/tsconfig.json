@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
-  "exclude": ["node_modules", "dist", "**/*.spec.*", "**/*.story.*"],
+  "exclude": ["node_modules", "dist", "dist-esm", "**/*.spec.*", "**/*.story.*"],
   "include": ["src"],
   "compilerOptions": {
     "resolveJsonModule": true,

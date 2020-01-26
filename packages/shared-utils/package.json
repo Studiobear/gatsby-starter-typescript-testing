@@ -9,11 +9,10 @@
   "main": "./dist/index",
   "module": "./dist-esm/index",
   "types": "./dist/index.d.ts",
-  "dependencies": {
-    "typescript": "^3.7.4"
-  },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "jest": "24.9.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
   },
   "license": "MIT",
   "scripts": {

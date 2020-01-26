@@ -20,7 +20,6 @@
     "react-helmet-async": "^1.0.4",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
-    "typography-theme-github": "^0.16.19",
     "typography-theme-st-annes": "^0.16.19"
   },
   "license": "MIT",
@@ -39,6 +38,9 @@
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
   "devDependencies": {
-    "@types/react-helmet": "^5.0.15"
+    "@testing-library/jest-dom": "^5.0.2",
+    "@types/react-helmet": "^5.0.15",
+    "jest": "24.9.0",
+    "typescript": "^3.7.4"
   }
 }

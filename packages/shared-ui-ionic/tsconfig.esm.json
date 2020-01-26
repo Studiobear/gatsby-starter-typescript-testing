@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
-  "exclude": ["node_modules", "dist", "**/*.test.*", "**/*.spec.*", "**/*.story.*"],
+  "exclude": ["node_modules", "dist", "dist-esm", "**/*.test.*", "**/*.spec.*", "**/*.story.*"],
   "include": ["src"],
   "compilerOptions": {
     "module": "esnext",
