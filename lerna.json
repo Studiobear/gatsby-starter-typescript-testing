@@ -11,7 +11,8 @@
       "allowBranch": "master",
       "bump": "patch",
       "conventionalCommits": true,
-      "message": "chore(release): Publish"
+      "message": "chore(release): Publish",
+      "registry": "https://registry.npmjs.org/"
     }
   }
 }

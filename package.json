@@ -23,10 +23,13 @@
     "test:ui": "cd packages/shared-ui-ionic && yarn test",
     "test:watch": "yarn test --watch",
     "cy:open": "cypress open",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@testing-library/cypress": "^5.0.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -57,7 +60,7 @@
     "gatsby-cypress": "^0.2.19",
     "husky": "^4.0.6",
     "identity-obj-proxy": "^3.0.0",
-    "jest":"^25.1.0",
+    "jest": "^25.1.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -76,6 +79,11 @@
       "pre-commit": "yarn run format",
       "pre-push": "yarn run format && npm test:all"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "repository": {
     "type": "git",
