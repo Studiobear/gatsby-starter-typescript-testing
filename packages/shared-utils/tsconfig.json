@@ -12,8 +12,7 @@
     "outDir": "dist",
     "rootDir": "src",
     "baseUrl": ".",
-    "typeRoots": ["src/types"],
-    "types": ["node", "react-helmet"],
+    "types": ["node", "jest"],
     "tsBuildInfoFile": "./buildcache"
   }
 }

@@ -73,8 +73,8 @@
   "license": "MIT",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format",
-      "pre-push": "npm run format && npm test:all"
+      "pre-commit": "yarn run format",
+      "pre-push": "yarn run format && npm test:all"
     }
   },
   "repository": {
@@ -85,7 +85,8 @@
     "url": "https://gitlab.com/studiobear/gatsby-starter-typescript-testing/issues"
   },
   "engines": {
-    "node": "10.16.0"
+    "node": "10.16.0",
+    "yarn": "1.21.1"
   },
   "resolutions": {
     "cypress": "^3.8.2"
