@@ -8,7 +8,7 @@
   "stream": true,
   "command": {
     "publish": {
-      "allowBranch": "master",
+      "allowBranch": "develop",
       "bump": "patch",
       "conventionalCommits": true,
       "message": "chore(release): Publish",
