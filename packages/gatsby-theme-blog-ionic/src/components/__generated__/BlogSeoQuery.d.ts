@@ -3,19 +3,19 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: SeoQuery
+// GraphQL query operation: BlogSeoQuery
 // ====================================================
 
-export interface SeoQuery_site_siteMetadata {
+export interface BlogSeoQuery_site_siteMetadata {
   title: string | null;
   description: string | null;
   author: string | null;
 }
 
-export interface SeoQuery_site {
-  siteMetadata: SeoQuery_site_siteMetadata | null;
+export interface BlogSeoQuery_site {
+  siteMetadata: BlogSeoQuery_site_siteMetadata | null;
 }
 
-export interface SeoQuery {
-  site: SeoQuery_site | null;
+export interface BlogSeoQuery {
+  site: BlogSeoQuery_site | null;
 }

@@ -5,8 +5,6 @@ export default {
     author: `@bearcanrun`,
   },
   plugins: [
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,6 +20,8 @@ export default {
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -50,8 +50,8 @@ export default {
       options: {
         localSchemaFile: './schema.json',
         includes: [
-          './packages/**/src/**/*.tsx',
-          './packages/**/src/**/*.ts',
+          '../../packages/**/src/**/*.tsx',
+          '../../packages/**/src/**/*.ts',
           './node_modules/gatsby-transformer-sharp/src/*.js',
           './node_modules/gatsby-image/src/*.js',
         ],
@@ -59,8 +59,10 @@ export default {
     },
     `gatsby-plugin-react-helmet-async`,
     {
-      resolve: `gatsby-theme-blog-core`,
-      options: {},
+      resolve: `@studiobear/gatsby-theme-blog-ionic`,
+      options: {
+        basePath: '/blog',
+      },
     },
   ],
 }

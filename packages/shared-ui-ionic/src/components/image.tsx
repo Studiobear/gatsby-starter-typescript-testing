@@ -18,8 +18,12 @@ export const Image = () => {
     query ImagePlaceholderQuery {
       placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 300, quality: 50) {
+            src
+            srcSet
+            aspectRatio
+            sizes
+            base64
           }
         }
       }

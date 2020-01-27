@@ -20,25 +20,6 @@ module.exports = themeOptions => {
       ],
     },
     plugins: [
-      mdx && {
-        resolve: `gatsby-plugin-mdx`,
-        options: {
-          extensions: [`.mdx`, `.md`],
-          gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                // should this be configurable by the end-user?
-                maxWidth: 1380,
-                linkImagesToOriginal: false,
-              },
-            },
-            { resolve: `gatsby-remark-copy-linked-files` },
-            { resolve: `gatsby-remark-smartypants` },
-          ],
-          remarkPlugins: [require(`remark-slug`)],
-        },
-      },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
@@ -55,6 +36,27 @@ module.exports = themeOptions => {
       },
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
+      mdx && {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          extensions: [`.mdx`, `.md`],
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                // should this be configurable by the end-user?
+                maxWidth: 1380,
+                linkImagesToOriginal: false,
+              },
+            },
+            `gatsby-remark-prismjs`,
+            `gatsby-remark-copy-linked-files`,
+            `gatsby-remark-smartypants`,
+          ],
+          remarkPlugins: [require(`remark-slug`)],
+        },
+      },
+      `gatsby-plugin-feed-mdx`,
     ].filter(Boolean),
   }
 }

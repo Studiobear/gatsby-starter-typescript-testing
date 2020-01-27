@@ -7,11 +7,11 @@
 // ====================================================
 
 export interface ImagePlaceholderQuery_placeholderImage_childImageSharp_fluid {
+  src: string;
+  srcSet: string;
+  aspectRatio: number;
+  sizes: string;
   base64: string | null;
-  aspectRatio: number | null;
-  src: string | null;
-  srcSet: string | null;
-  sizes: string | null;
 }
 
 export interface ImagePlaceholderQuery_placeholderImage_childImageSharp {

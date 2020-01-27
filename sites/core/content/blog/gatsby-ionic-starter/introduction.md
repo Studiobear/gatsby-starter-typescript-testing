@@ -1,6 +1,6 @@
 ---
 title: An Introduction the the Gatsby Ionic Starter
-created: '2019-07-01T22:12:03.284Z'
+date: 2019-12-10
 published: 'true'
 description: 'An overview of the gatsby ionic starter'
 ---

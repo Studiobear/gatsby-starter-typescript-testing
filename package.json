@@ -5,7 +5,7 @@
     "packages/*",
     "sites/*"
   ],
-  "description": "A starter for Gatsby integrated with Ionic + Typescript and TDD-ready",
+  "description": "An advanced Gatsby-based monorepo setup to develop with Typescript, Jest and Cypress",
   "version": "0.0.1",
   "author": "Barry Low <barry@studiobear.co>",
   "scripts": {

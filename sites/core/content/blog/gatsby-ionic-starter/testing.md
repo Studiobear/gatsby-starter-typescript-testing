@@ -1,6 +1,6 @@
 ---
 title: Gatsby Ionic Starter and Testing
-created: '2019-07-01T22:12:03.284Z'
+date: 2019-12-16
 published: 'true'
 description: 'Pushing test-driven development to the forefront'
 ---
