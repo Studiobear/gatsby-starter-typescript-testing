@@ -146,3 +146,21 @@ A variety of docs and other sources were used to help build this starter.
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://gitlab.com/studiobear/gatsby-starter-ionic.git)
+
+## Testing
+
+Jest tests can be slow. Install [watchman](https://facebook.github.io/watchman/docs/install.html) to speed them up!
+
+For Mac OSX, you might get a watchman.plist error of 'service not found' or 'permission denied.' This is usually caused by other services adding Launch Agents with incorrect permissions. Fix permissions by running:
+
+```
+sudo chown -R $(whoami):staff ~/Library/LaunchAgents
+```
+
+### Running tests with Lerna
+
+**Example**
+
+```
+lerna run test:watch --scope @studiobear/shared-ui-ionic
+```

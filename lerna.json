@@ -1,0 +1,18 @@
+{
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "independent",
+  "loglevel": "success",
+  "registry": "https://registry.npmjs.org/",
+  "ignoreChanges": ["CHANGELOG.md", "**/__tests__/**", "**/__mocks__/**", "**/__testfixtures__/**"],
+  "stream": true,
+  "command": {
+    "publish": {
+      "allowBranch": "master",
+      "bump": "patch",
+      "conventionalCommits": true,
+      "message": "chore(release): Publish",
+      "registry": "https://registry.npmjs.org/"
+    }
+  }
+}

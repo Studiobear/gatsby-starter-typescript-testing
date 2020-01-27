@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
     "target": "esnext",
+    "module": "commonjs",
     "jsx": "react",
-    "lib": ["dom", "esnext"],
+    "lib": ["dom", "es2015", "esnext"],
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "noEmit": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "allowJs": true,
-    "noImplicitReturns": true
+    // "skipLibCheck": true, // Use only for faster builds; hides misconfigs/conflicts
+    "esModuleInterop": true
   },
-  "exclude": ["node_modules", "public", ".cache"],
-  "include": ["./src/**/*", "./node_modules/jest-dom", "./node_modules/@testing-library/jest-dom/extend-expect.d.ts"]
+  "include": ["./packages/**/src/**/*"],
+  "exclude": ["node_modules"]
 }

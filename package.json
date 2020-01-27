@@ -1,44 +1,40 @@
 {
-  "name": "gatsby-starter-ionic",
+  "name": "gatsby-starter-typescript-testing",
   "private": true,
-  "description": "A starter for Gatsby integrated with Ionic + Typescript and TDD-ready",
+  "workspaces": [
+    "packages/*",
+    "sites/*"
+  ],
+  "description": "An advanced Gatsby-based monorepo setup to develop with Typescript, Jest and Cypress",
   "version": "0.0.1",
   "author": "Barry Low <barry@studiobear.co>",
-  "dependencies": {
-    "@ionic/react": "^4.11.7",
-    "classnames": "^2.2.6",
-    "gatsby": "^2.18.17",
-    "gatsby-image": "^2.2.37",
-    "gatsby-plugin-codegen": "^1.0.14",
-    "gatsby-plugin-manifest": "^2.2.34",
-    "gatsby-plugin-offline": "^3.0.30",
-    "gatsby-plugin-react-axe": "^0.3.0",
-    "gatsby-plugin-react-helmet-async": "^1.0.13",
-    "gatsby-plugin-sharp": "^2.3.10",
-    "gatsby-plugin-typescript": "^2.1.23",
-    "gatsby-plugin-typography": "^2.3.20",
-    "gatsby-remark-copy-linked-files": "^2.1.33",
-    "gatsby-remark-images": "^3.1.39",
-    "gatsby-remark-prismjs": "^3.3.29",
-    "gatsby-remark-smartypants": "^2.1.19",
-    "gatsby-source-filesystem": "^2.1.43",
-    "gatsby-transformer-remark": "^2.6.45",
-    "gatsby-transformer-sharp": "^2.3.9",
-    "ionicons": "^4.6.3",
-    "prismjs": "^1.18.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet-async": "^1.0.4",
-    "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
-    "typography-theme-github": "^0.16.19"
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "lerna run develop --scope core",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "types:ui": "cd packages/shared-ui-ionic && yarn type-build",
+    "type-check": "tsc --noEmit",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "jest",
+    "test:all": "yarn test:core --passWithNoTests && yarn test:ionic --passWithNoTests",
+    "test:core": "cd packages/core && yarn test",
+    "test:blog": "cd packages/gatsby-theme-blog && yarn test",
+    "test:ui": "cd packages/shared-ui-ionic && yarn test",
+    "test:watch": "yarn test --watch",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@testing-library/cypress": "^5.0.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@types/cypress": "^1.1.3",
-    "@types/jest": "^24.0.25",
+    "@types/jest": "24.0.25",
     "@types/node": "^13.1.2",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
@@ -55,47 +51,52 @@
     "cypress-axe": "^0.5.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "gatsby": "^2.19.5",
     "gatsby-cypress": "^0.2.19",
     "husky": "^4.0.6",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "start-server-and-test": "^1.10.6",
-    "ts-jest": "^24.2.0",
+    "ts-jest": "^25.0.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"
   },
   "keywords": [
     "gatsby",
-    "ionic",
     "typescript"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "type-check": "tsc --noEmit",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "jest",
-    "test:watch": "npm test -- --watch",
-    "cy:open": "cypress open",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format",
-      "pre-push": "npm run format && npm test"
+      "pre-commit": "yarn run format",
+      "pre-push": "yarn run format && npm test:all"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/studiobear/gatsby-starter-ionic.git"
+    "url": "https://gitlab.com/studiobear/gatsby-starter-typescript-testing.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/studiobear/gatsby-starter-ionic/issues"
+    "url": "https://gitlab.com/studiobear/gatsby-starter-typescript-testing/issues"
+  },
+  "engines": {
+    "node": "10.16.0",
+    "yarn": "1.21.1"
+  },
+  "resolutions": {
+    "cypress": "^3.8.2"
   }
 }

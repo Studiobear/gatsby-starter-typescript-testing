@@ -53,16 +53,11 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# workspace
-.vscode
+.env.*
 
 # gatsby files
 .cache/
 public
-
-# library output
-lib
 
 # Mac files
 .DS_Store

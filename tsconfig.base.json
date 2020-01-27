@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "jsx": "react",
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "noImplicitReturns": true
+  },
+  "include": ["packages", "jest-dom/extend-expect"],
+  "exclude": ["node_modules"]
+}
