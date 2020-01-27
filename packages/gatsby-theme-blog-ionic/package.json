@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/gatsby-theme-blog-ionic",
   "description": "Gatsby theme with typescript and storybook built in. Based on gatsby-theme-typescript by Mae Capozzi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "author": "Barry Low <barry@studiobear.co>",
   "license": "MIT",
@@ -45,7 +45,7 @@
     "@ionic/react": "^4.11.10",
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
-    "@studiobear/shared-ui-ionic": "^0.0.10",
+    "@studiobear/shared-ui-ionic": "^0.0.11",
     "@studiobear/shared-utils": "file:../shared-utils",
     "gatsby-core-utils": "^1.0.26",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
