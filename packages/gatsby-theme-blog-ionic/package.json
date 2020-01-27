@@ -45,7 +45,7 @@
     "@ionic/react": "^4.11.10",
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
-    "@studiobear/shared-ui-ionic": "^0.0.9",
+    "@studiobear/shared-ui-ionic": "^0.0.10",
     "@studiobear/shared-utils": "file:../shared-utils",
     "gatsby-core-utils": "^1.0.26",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",

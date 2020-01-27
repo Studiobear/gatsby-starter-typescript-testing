@@ -34,7 +34,7 @@ export const Layout = (props: LayoutProps) => (
     <IonPage>
       <Header siteTitle={props.title} />
       <IonContent className={'ion-padding'}>{props.children}</IonContent>
-      <Footer />>
+      <Footer />
     </IonPage>
   </IonApp>
 )

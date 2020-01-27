@@ -8,7 +8,7 @@
   "dependencies": {
     "@ionic/react": "^4.11.7",
     "@studiobear/gatsby-theme-blog-ionic": "file:../../packages/gatsby-theme-blog-ionic",
-    "@studiobear/shared-ui-ionic": "^0.0.9",
+    "@studiobear/shared-ui-ionic": "^0.0.10",
     "@studiobear/shared-utils": "file:../../packages/shared-utils",
     "classnames": "^2.2.6",
     "gatsby": "^2.19.5",
