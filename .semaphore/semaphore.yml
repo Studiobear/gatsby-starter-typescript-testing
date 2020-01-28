@@ -15,7 +15,7 @@ blocks:
             - cache restore
             - yarn global add lerna
             - lerna bootstrap
-            - lerna run test
+            - 'yarn test:all'
             - cache store
   - name: 'Block #2'
     task:
