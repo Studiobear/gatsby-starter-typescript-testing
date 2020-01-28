@@ -1,5 +1,5 @@
 version: v1.0
-name: Node JS
+name: Node JS Gatsby Build
 agent:
   machine:
     type: e1-standard-2
@@ -10,21 +10,22 @@ blocks:
       jobs:
         - name: yarn install
           commands:
-            - sem-version node 10
+            - nvm use 10
             - checkout
             - cache restore
             - yarn global add lerna
             - lerna bootstrap
             - lerna run test
             - cache store
-  - name: 'Block #2'
+  - name: 'Build Site'
     task:
       jobs:
-        - name: Build site
+        - name: Gatsby Build
           commands:
+            - nvm use 10
             - checkout
             - cache restore
-            - yarn workspace core ./node_modules/.bin/gatsby build
+            - yarn workspace core gatsby build
 promotions:
   - name: Production deploy
     pipeline_file: pipeline_2.yml
