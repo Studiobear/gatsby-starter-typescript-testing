@@ -1,0 +1,15 @@
+version: v1.0
+name: Pipeline 2
+blocks:
+  - name: 'Block #1'
+    task:
+      jobs:
+        - name: Deploy Website
+          commands:
+            - yarn global add netlify-cli
+            - cache restore
+            - netlify deploy --dir=sites/core/public --prod
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804

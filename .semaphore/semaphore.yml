@@ -1,0 +1,31 @@
+version: v1.0
+name: Node JS
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Install dependencies
+    task:
+      jobs:
+        - name: yarn install
+          commands:
+            - sem-version node 10
+            - checkout
+            - cache restore
+            - lerna bootstrap
+            - lerna run test
+            - cache store
+  - name: 'Block #2'
+    task:
+      jobs:
+        - name: Build site
+          commands:
+            - checkout
+            - cache restore
+            - yarn workspace core ./node_modules/.bin/gatsby build
+promotions:
+  - name: Production deploy
+    pipeline_file: pipeline_2.yml
+    auto_promote:
+      when: branch = 'master' AND result = 'passed'
