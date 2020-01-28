@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "test": "jest  --passWithNoTests",
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --noEmit --watch",
     "storybook": "start-storybook -p 6006",
