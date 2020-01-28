@@ -13,6 +13,7 @@ blocks:
             - sem-version node 10
             - checkout
             - cache restore
+            - yarn global add lerna
             - lerna bootstrap
             - lerna run test
             - cache store
