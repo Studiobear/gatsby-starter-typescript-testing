@@ -93,10 +93,6 @@
   "bugs": {
     "url": "https://gitlab.com/studiobear/gatsby-starter-typescript-testing/issues"
   },
-  "engines": {
-    "node": "10.16.0",
-    "yarn": "1.21.1"
-  },
   "resolutions": {
     "cypress": "^3.8.2"
   }
