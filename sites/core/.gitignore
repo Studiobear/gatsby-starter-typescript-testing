@@ -1,3 +1,6 @@
 dist
 dist-esm
 node_modules
+
+# Local Netlify folder
+.netlify

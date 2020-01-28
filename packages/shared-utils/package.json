@@ -25,5 +25,6 @@
     "cy:open": "cypress open",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
-  "gitHead": "6200917235388cc135575c57380a381e433e2210"
+  "gitHead": "6200917235388cc135575c57380a381e433e2210",
+  "resolutions": { "upath": "1.2.0" }
 }
