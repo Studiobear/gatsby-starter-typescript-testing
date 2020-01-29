@@ -24,13 +24,13 @@ import '@ionic/react/css/display.css'
 import '../styles/overrides.css'
 import '../styles/layout.css'
 
-export interface LayoutProps {
+export interface ILayoutProps {
   title: string
   children: ReactNode
-  defaultHref: string
+  defaultHref?: string | undefined
 }
 
-export const Layout = (props: LayoutProps) => (
+export const Layout = (props: ILayoutProps) => (
   <IonApp>
     <IonPage>
       <Header siteTitle={props.title} defaultHref={props.defaultHref} />

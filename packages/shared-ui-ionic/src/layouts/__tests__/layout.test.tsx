@@ -30,4 +30,15 @@ describe('Layout', () => {
     expect(getByText('Gatsby Starter Ionic - Layout')).toBeInTheDocument()
     expect(getByText('Passes props')).toBeInTheDocument()
   })
+
+  it('passes defaultHref to header', () => {
+    const { queryAllByTestId } = render(
+      <Layout title={siteTitle} defaultHref="/blog">
+        <h1>Passes defaultHref</h1>
+      </Layout>,
+    )
+    const testNav = queryAllByTestId('header-nav-back')
+    expect(testNav.length).toBe(1)
+    expect(testNav[0]).toMatchObject(expect.objectContaining({ defaultHref: '/blog' }))
+  })
 })
