@@ -15,6 +15,13 @@ export default {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `content/blog/gatsby-ionic-starter`,
+        name: `content/blog/gatsby-ionic-starter`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `content/assets`,
         name: `content/assets`,
       },

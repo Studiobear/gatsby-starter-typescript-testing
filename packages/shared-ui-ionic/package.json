@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/shared-ui-ionic",
   "description": "Shared-UI Ionic components for Studiobear Gatsby Typescript + Testing",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "author": "Barry Low <barry@studiobear.co>",
   "publishConfig": {
     "access": "public"
@@ -10,9 +10,9 @@
   "module": "./dist-esm/index",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@ionic/react": "^4.11.7",
+    "@ionic/react": "^4.11.10",
     "classnames": "^2.2.6",
-    "gatsby": "^2.18.17",
+    "gatsby": "^2.19.5",
     "gatsby-image": "^2.2.37",
     "ionicons": "^4.6.3",
     "react": "^16.12.0",
@@ -41,7 +41,7 @@
     "@testing-library/jest-dom": "^5.0.2",
     "@types/react-helmet": "^5.0.15",
     "jest": "^25.1.0",
-    "ts-jest": "25.0.0",
+    "ts-jest": "^25.0.0",
     "typescript": "^3.7.4"
   },
   "gitHead": "6200917235388cc135575c57380a381e433e2210"

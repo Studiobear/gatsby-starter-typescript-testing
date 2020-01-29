@@ -1,12 +1,20 @@
 import React from 'react'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { IonText } from '@ionic/react'
 import { Layout } from '@studiobear/shared-ui-ionic'
+import { WindowLocation } from '@reach/router'
+import { PostsQuery } from '../../templates/__generated__/PostsQuery'
 
 import SEO from '../seoData'
 import Posts from './posts'
 
+interface IPostPage {
+  data: {
+    location: WindowLocation
+    data: PostsQuery
+  }
+}
+
 export const PostsPage = ({ location, data }) => {
+  console.log(data)
   const { site, allBlogPost } = data
   return (
     <Layout title={site.title}>

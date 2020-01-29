@@ -27,12 +27,13 @@ import '../styles/layout.css'
 export interface LayoutProps {
   title: string
   children: ReactNode
+  defaultHref: string
 }
 
 export const Layout = (props: LayoutProps) => (
   <IonApp>
     <IonPage>
-      <Header siteTitle={props.title} />
+      <Header siteTitle={props.title} defaultHref={props.defaultHref} />
       <IonContent className={'ion-padding'}>{props.children}</IonContent>
       <Footer />
     </IonPage>
