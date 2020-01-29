@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/shared-ui-ionic",
   "description": "Shared-UI Ionic components for Studiobear Gatsby Typescript + Testing",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "author": "Barry Low <barry@studiobear.co>",
   "publishConfig": {
     "access": "public"
