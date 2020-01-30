@@ -13,6 +13,11 @@
     "rootDir": "src",
     "baseUrl": ".",
     "types": ["node", "react-helmet", "jest"],
-    "tsBuildInfoFile": "./buildcache"
+    "tsBuildInfoFile": "./buildcache",
+    "plugins": [
+      {
+        "transform": "typescript-loadable-components-plugin"
+      }
+    ]
   }
 }

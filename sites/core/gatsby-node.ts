@@ -12,6 +12,12 @@ interface NodeProps {
   actions: any
 }
 
+interface WebpackProps {
+  stage: any
+  loaders: any
+  actions: any
+}
+
 export const onCreatePage = ({ page, actions }: NodeProps) => {
   if (process.env.NODE_ENV !== `production` && page.path === `/404/`) {
     const { createPage } = actions
@@ -19,5 +25,24 @@ export const onCreatePage = ({ page, actions }: NodeProps) => {
     // This will be used as fallback if more specific pages are not found
     page.matchPath = `/*`
     createPage(page)
+  }
+}
+
+export const onCreateWebpackConfig = ({ stage, loaders, actions }: WebpackProps) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /@ionic\/core/,
+            use: loaders.null(),
+          },
+          {
+            test: /ionicons/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
   }
 }

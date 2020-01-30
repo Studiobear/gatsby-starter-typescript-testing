@@ -15,6 +15,8 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "types:ui": "cd packages/shared-ui-ionic && yarn type-build",
     "type-check": "tsc --noEmit",
+    "monorepo-check": "manypkg check",
+    "monorepo-fix": "manypkg fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
