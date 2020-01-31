@@ -92,3 +92,5 @@ export class DeepPropertyAccess {
     return obj && props.reduce((result, prop) => (result == null ? undefined : result[prop]), obj)
   }
 }
+
+export default DeepPropertyAccess
