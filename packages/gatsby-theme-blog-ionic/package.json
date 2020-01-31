@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/gatsby-theme-blog-ionic",
   "description": "Gatsby theme with typescript and storybook built in. Based on gatsby-theme-typescript by Mae Capozzi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "author": "Barry Low <barry@studiobear.co>",
   "license": "MIT",
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@loadable/webpack-plugin": "^5.12.0",
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
     "@storybook/addons": "^5.1.11",
@@ -36,6 +37,7 @@
     "@storybook/core": "^5.3.9",
     "@storybook/react": "^5.1.11",
     "babel-loader": "^8.0.6",
+    "babel-preset-gatsby": "^0.2.27",
     "gatsby": "^2.19.5",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
@@ -43,13 +45,15 @@
     "react-dom": "^16.12.0",
     "regenerator-runtime": "^0.13.3",
     "ts-jest": "^25.0.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5"
   },
   "dependencies": {
     "@ionic/react": "^4.11.10",
+    "@loadable/component": "^5.12.0",
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
-    "@studiobear/shared-ui-ionic": "^0.0.15",
+    "@studiobear/shared-ui-ionic": "^0.0.16",
     "@studiobear/shared-utils": "^0.0.3",
     "gatsby-core-utils": "^1.0.26",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",

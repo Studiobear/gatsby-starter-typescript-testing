@@ -4,9 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+const LoadablePlugin = require('@loadable/webpack-plugin')
 
-// Making typescript --isolatedModules happy...
 interface NodeProps {
   page: any
   actions: any
@@ -18,6 +17,12 @@ interface WebpackProps {
   actions: any
 }
 
+exports.onCreateWebpackConfig = ({ actions }: WebpackProps) => {
+  actions.setWebpackConfig({
+    plugins: [new LoadablePlugin()],
+  })
+}
+
 export const onCreatePage = ({ page, actions }: NodeProps) => {
   if (process.env.NODE_ENV !== `production` && page.path === `/404/`) {
     const { createPage } = actions
@@ -25,24 +30,5 @@ export const onCreatePage = ({ page, actions }: NodeProps) => {
     // This will be used as fallback if more specific pages are not found
     page.matchPath = `/*`
     createPage(page)
-  }
-}
-
-export const onCreateWebpackConfig = ({ stage, loaders, actions }: WebpackProps) => {
-  if (stage === 'build-html') {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /@ionic\/core/,
-            use: loaders.null(),
-          },
-          {
-            test: /ionicons/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
   }
 }

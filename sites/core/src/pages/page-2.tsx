@@ -1,25 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
-import { Layout } from '@studiobear/shared-ui-ionic'
-import SEO from '../components/seoData'
-
-import { DeepPropertyAccess } from '@studiobear/shared-utils'
+import loadable from '@loadable/component'
 
 import { IPageQuery } from './index'
 
-const { get } = DeepPropertyAccess
+const Page2Body = loadable(() => import('../components/page2Body'), {
+  fallback: <div>Loading...</div>,
+})
 
-const SecondPage: React.SFC<IPageQuery> = ({ data }) => {
-  const siteTitle = get(data, 'site', 'siteMetadata', 'title') || ''
-  return (
-    <Layout title={siteTitle}>
-      <SEO title="Page two" />
-      <h1>Hi from the second page</h1>
-      <p>Welcome to page 2</p>
-      <Link to="/">Go back to the homepage</Link>
-    </Layout>
-  )
-}
+export const SecondPage = (props: IPageQuery) => <Page2Body {...props} />
 
 export default SecondPage
