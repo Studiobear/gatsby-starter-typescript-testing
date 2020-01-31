@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/shared-utils",
   "description": "Shared utilities for Studiobear",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Barry Low <barry@studiobear.co>",
   "publishConfig": {
     "access": "public"
@@ -9,6 +9,10 @@
   "main": "./dist/index",
   "module": "./dist-esm/index",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "dist-esm"
+  ],
   "devDependencies": {
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
