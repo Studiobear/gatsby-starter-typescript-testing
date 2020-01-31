@@ -1,23 +1,16 @@
 import React from 'react'
-
-import { Layout } from '@studiobear/shared-ui-ionic'
-import SEO from '../components/seoData'
-
-import { DeepPropertyAccess } from '@studiobear/shared-utils'
+import loadable from '@loadable/component'
 
 import { IPageQuery } from './index'
 
-const { get } = DeepPropertyAccess
+const Page404Body = loadable(() => import('../components/404Body'), {
+  fallback: <div>Loading...</div>,
+})
 
-const NotFoundPage: React.SFC<IPageQuery> = ({ data }) => {
-  const siteTitle = get(data, 'site', 'siteMetadata', 'title') || ''
-  return (
-    <Layout title={siteTitle}>
-      <SEO title="404: Not found" />
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Layout>
-  )
-}
+export const NotFoundPage = (props: IPageQuery) => (
+  <div>
+    <Page404Body {...props} />
+  </div>
+)
 
 export default NotFoundPage

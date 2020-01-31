@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import '@testing-library/jest-dom/extend-expect'
 import { render, cleanup } from '@testing-library/react'
 
-import { Layout } from '../index'
+import { LayoutBody } from '../index'
 
 describe('Layout', () => {
   const siteTitle = 'Gatsby Starter Ionic - Layout'
@@ -13,21 +13,32 @@ describe('Layout', () => {
 
   it('renders without crashing', () => {
     const { getByText } = render(
-      <Layout title={siteTitle}>
+      <LayoutBody title={siteTitle}>
         <h1>Renders</h1>
-      </Layout>,
+      </LayoutBody>,
     )
     expect(getByText('Renders')).toBeInTheDocument()
   })
 
   it('passes data and children props', () => {
     const { getByText, queryAllByTestId } = render(
-      <Layout title={siteTitle}>
+      <LayoutBody title={siteTitle}>
         <h1>Passes props</h1>
-      </Layout>,
+      </LayoutBody>,
     )
     expect(queryAllByTestId('banner').length).toBe(1)
     expect(getByText('Gatsby Starter Ionic - Layout')).toBeInTheDocument()
     expect(getByText('Passes props')).toBeInTheDocument()
+  })
+
+  it('passes defaultHref to header', () => {
+    const { queryAllByTestId } = render(
+      <LayoutBody title={siteTitle} defaultHref="/blog">
+        <h1>Passes defaultHref</h1>
+      </LayoutBody>,
+    )
+    const testNav = queryAllByTestId('header-nav-back')
+    expect(testNav.length).toBe(1)
+    expect(testNav[0]).toMatchObject(expect.objectContaining({ defaultHref: '/blog' }))
   })
 })

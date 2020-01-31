@@ -1,8 +1,5 @@
 import React, { ReactNode } from 'react'
-import { IonApp, IonPage, IonContent, IonFooter, IonToolbar, IonTitle } from '@ionic/react'
-// import classNames from 'classnames'
-
-import { Header, Footer } from '../components'
+import loadable from '@loadable/component'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -24,19 +21,16 @@ import '@ionic/react/css/display.css'
 import '../styles/overrides.css'
 import '../styles/layout.css'
 
-export interface LayoutProps {
+const LayoutBody = loadable(() => import('../components/layoutBody'), {
+  fallback: <div>Loading...</div>,
+})
+
+export interface ILayoutProps {
   title: string
   children: ReactNode
+  defaultHref?: string | undefined
 }
 
-export const Layout = (props: LayoutProps) => (
-  <IonApp>
-    <IonPage>
-      <Header siteTitle={props.title} />
-      <IonContent className={'ion-padding'}>{props.children}</IonContent>
-      <Footer />
-    </IonPage>
-  </IonApp>
-)
+export const Layout = (props: ILayoutProps) => <LayoutBody {...props} />
 
 export default Layout

@@ -4,9 +4,16 @@ const mkdirp = require(`mkdirp`)
 const Debug = require(`debug`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { urlResolve, createContentDigest } = require(`gatsby-core-utils`)
+const LoadablePlugin = require('@loadable/webpack-plugin')
 
 const debug = Debug(`gatsby-theme-blog-ionic`)
 const withDefaults = require(`./utils/default-options`)
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    plugins: [new LoadablePlugin()],
+  })
+}
 
 // Ensure that content directories exist at site-level
 exports.onPreBootstrap = ({ store }, themeOptions) => {

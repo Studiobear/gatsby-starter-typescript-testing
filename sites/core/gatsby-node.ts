@@ -4,12 +4,23 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+const LoadablePlugin = require('@loadable/webpack-plugin')
 
-// Making typescript --isolatedModules happy...
 interface NodeProps {
   page: any
   actions: any
+}
+
+interface WebpackProps {
+  stage: any
+  loaders: any
+  actions: any
+}
+
+exports.onCreateWebpackConfig = ({ actions }: WebpackProps) => {
+  actions.setWebpackConfig({
+    plugins: [new LoadablePlugin()],
+  })
 }
 
 export const onCreatePage = ({ page, actions }: NodeProps) => {

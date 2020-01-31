@@ -15,6 +15,13 @@ export default {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `content/blog/gatsby-ionic-starter`,
+        name: `content/blog/gatsby-ionic-starter`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `content/assets`,
         name: `content/assets`,
       },
@@ -50,18 +57,11 @@ export default {
       options: {
         localSchemaFile: './schema.json',
         includes: [
-          '../../packages/**/src/**/*.tsx',
-          '../../packages/**/src/**/*.ts',
+          './src/**/*.tsx',
+          './src/**/*.ts',
           './node_modules/gatsby-transformer-sharp/src/*.js',
           './node_modules/gatsby-image/src/*.js',
         ],
-      },
-    },
-    `gatsby-plugin-react-helmet-async`,
-    {
-      resolve: `@studiobear/gatsby-theme-blog-ionic`,
-      options: {
-        basePath: '/blog',
       },
     },
   ],

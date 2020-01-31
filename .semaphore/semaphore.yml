@@ -1,0 +1,35 @@
+version: v1.0
+name: Node JS Gatsby Build
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Install dependencies
+    task:
+      jobs:
+        - name: yarn install
+          commands:
+            - nvm use 10
+            - checkout
+            - cache restore
+            - yarn global add lerna
+            - lerna bootstrap
+            - lerna run test
+            - cache store
+  - name: 'Build Site'
+    task:
+      jobs:
+        - name: Gatsby Build
+          commands:
+            - nvm use 10
+            - checkout
+            - cache restore
+            - yarn workspace core add @studiobear/shared-utils
+            - yarn workspace core gatsby build
+            - cache store starter-build-$SEMAPHORE_GIT_BRANCH sites/core/public/
+promotions:
+  - name: Production deploy
+    pipeline_file: production-deploy.yml
+    auto_promote:
+      when: result = 'passed'
