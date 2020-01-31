@@ -25,6 +25,7 @@ blocks:
             - nvm use 10
             - checkout
             - cache restore
+            - yarn workspace core add @studiobear/shared-utils
             - yarn workspace core gatsby build
 promotions:
   - name: Production deploy
