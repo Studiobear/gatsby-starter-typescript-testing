@@ -3,6 +3,8 @@ name: Pipeline 2
 blocks:
   - name: 'Block #1'
     task:
+      secrets:
+        - name: netlify-authentication
       jobs:
         - name: Deploy Website
           commands:
