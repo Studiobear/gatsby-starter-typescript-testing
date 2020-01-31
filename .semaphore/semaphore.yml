@@ -27,8 +27,9 @@ blocks:
             - cache restore
             - yarn workspace core add @studiobear/shared-utils
             - yarn workspace core gatsby build
+            - cache store starter-build-$SEMAPHORE_GIT_BRANCH sites/core/public/
 promotions:
   - name: Production deploy
-    pipeline_file: pipeline_2.yml
+    pipeline_file: production-deploy.yml
     auto_promote:
-      when: branch = 'master' AND result = 'passed'
+      when: result = 'passed'

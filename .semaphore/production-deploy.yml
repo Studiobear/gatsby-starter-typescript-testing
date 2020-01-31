@@ -1,15 +1,16 @@
 version: v1.0
-name: Pipeline 2
+name: Production Deploy
 blocks:
-  - name: 'Block #1'
+  - name: 'Deploy to Netlify'
     task:
       secrets:
         - name: netlify-authentication
       jobs:
         - name: Deploy Website
           commands:
+            - nvm use 10
             - yarn global add netlify-cli
-            - cache restore
+            - cache restore starter-build-$SEMAPHORE_GIT_BRANCH
             - netlify deploy --dir=sites/core/public --prod
 agent:
   machine:
