@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Layout } from '@studiobear/shared-ui-ionic'
-import SEO from '../components/seoData'
+// import { Layout } from '@studiobear/shared-ui-ionic'
+// import SEO from '../components/seoData'
 
 import { DeepPropertyAccess } from '@studiobear/shared-utils'
 
@@ -12,11 +12,12 @@ const { get } = DeepPropertyAccess
 const page404Body: React.SFC<IPageQuery> = ({ data }) => {
   const siteTitle = get(data, 'site', 'siteMetadata', 'title') || ''
   return (
-    <Layout title={siteTitle}>
-      <SEO title="404: Not found" />
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Layout>
+    <div>
+      <div id="content">
+        <h1>{siteTitle}</h1>
+        <h2>Welcome to Your Gatsby Ionic Starter</h2>
+      </div>
+    </div>
   )
 }
 

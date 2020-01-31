@@ -57,18 +57,11 @@ export default {
       options: {
         localSchemaFile: './schema.json',
         includes: [
-          '../../packages/**/src/**/*.tsx',
-          '../../packages/**/src/**/*.ts',
+          './src/**/*.tsx',
+          './src/**/*.ts',
           './node_modules/gatsby-transformer-sharp/src/*.js',
           './node_modules/gatsby-image/src/*.js',
         ],
-      },
-    },
-    `gatsby-plugin-react-helmet-async`,
-    {
-      resolve: `@studiobear/gatsby-theme-blog-ionic`,
-      options: {
-        basePath: '/blog',
       },
     },
   ],
