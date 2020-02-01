@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/master">
-    <img src="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/master.svg" alt="CI Status of master branch on semaphoreci.com" />
+    Master: <img src="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/master.svg?style=shields" alt="CI Status of master branch on semaphoreci.com" />
   </a>
   <a href="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/master">
-    <img src="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/develop.svg" alt="CI Status of master branch on semaphoreci.com" />
+    Develop: <img src="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/develop.svg?style=shields" alt="CI Status of master branch on semaphoreci.com" />
   </a>
 </p>
 
