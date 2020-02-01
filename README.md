@@ -1,8 +1,12 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://ionicframeworkcom.cdn.prismic.io/ionicframeworkcom/c7ef26d1ee42fbd72c4a44fd76db6234cc889dfd_ionic-vs-react-native.png" />
+  <a href="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/master">
+    Master: <img src="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/master.svg?style=shields" alt="CI Status of master branch on semaphoreci.com" />
+  </a>
+  <a href="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/master">
+    Develop: <img src="https://studiobear.semaphoreci.com/badges/gatsby-starter-typescript-testing/branches/develop.svg?style=shields" alt="CI Status of master branch on semaphoreci.com" />
   </a>
 </p>
+
 <h1 align="center">
   Gatsby Starter: Ionic
 </h1>
