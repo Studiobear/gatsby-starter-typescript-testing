@@ -17,7 +17,7 @@
     "type-check": "tsc --noEmit",
     "monorepo-check": "manypkg check",
     "monorepo-fix": "manypkg fix",
-    "publish:rc": "lerna deploy",
+    "publish:rc": "lerna-deploy",
     "publish:stable": "lerna-deploy --type=stable",
     "start": "npm run develop",
     "serve": "gatsby serve",
