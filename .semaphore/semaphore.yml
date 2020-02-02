@@ -12,6 +12,7 @@ fail_fast:
     when: "branch != 'master' AND branch != 'develop'"
 blocks:
   - name: Install Monorepo Dependencies
+    dependencies: []
     task:
       jobs:
         - name: Bootstrap monorepo
