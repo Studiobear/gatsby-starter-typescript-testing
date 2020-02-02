@@ -32,6 +32,8 @@ blocks:
             - nvm use 10
             - checkout
             - cache restore
+            - yarn global add lerna
+            - lerna bootstrap
             - lerna run test
             - cache store
   - name: 'Build Sites'
