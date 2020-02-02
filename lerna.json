@@ -8,11 +8,50 @@
   "stream": true,
   "command": {
     "publish": {
-      "allowBranch": "develop",
+      "allowBranch": "master",
       "bump": "patch",
       "conventionalCommits": true,
       "message": "chore(release): Publish",
       "registry": "https://registry.npmjs.org/"
+    }
+  },
+  "changelog": {
+    "repo": "Studiobear/gatsby-starter-typescript-testing",
+    "labels": {
+      "Tag: Breaking Change": ":boom: Breaking Change",
+      "Tag: Bug Fix": ":bug: Bug Fix",
+      "Tag: New Feature": ":rocket: New Feature"
+    },
+    "cacheDir": ".changelog"
+  },
+  "deploys": {
+    "repo": "Studiobear/gatsby-starter-typescript-testing",
+    "semver": {
+      "major": [":boom: Breaking Change"],
+      "minor": [":rocket: New Feature"],
+      "patch": [":bug: Bug Fix"]
+    },
+    "gitflow": {
+      "master": "master",
+      "develop": "develop"
+    },
+    "types": {
+      "stable": {
+        "tag": "latest",
+        "publish": {
+          "stable": true,
+          "npm": true,
+          "git": true
+        }
+      },
+      "next": {
+        "preid": "rc",
+        "tag": "next",
+        "publish": {
+          "npm": true,
+          "git": false
+        }
+      }
     }
   }
 }

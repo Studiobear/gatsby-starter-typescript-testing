@@ -6,7 +6,7 @@
     "sites/*"
   ],
   "description": "An advanced Gatsby-based monorepo setup to develop with Typescript, Jest and Cypress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Barry Low <barry@studiobear.co>",
   "scripts": {
     "build": "gatsby build",
@@ -17,6 +17,8 @@
     "type-check": "tsc --noEmit",
     "monorepo-check": "manypkg check",
     "monorepo-fix": "manypkg fix",
+    "publish:rc": "lerna deploy",
+    "publish:stable": "lerna-deploy --type=stable",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
@@ -93,6 +95,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "lerna": "^3.20.2",
+    "lerna-git-flow-deploy": "^0.6.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
