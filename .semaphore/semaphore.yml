@@ -4,23 +4,61 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+auto_cancel:
+  running:
+    when: 'true'
+fail_fast:
+  stop:
+    when: "branch != 'master' AND branch != 'develop'"
 blocks:
-  - name: Install dependencies
+  - name: Install Monorepo Dependencies
     task:
       jobs:
-        - name: yarn install
+        - name: Bootstrap monorepo
           commands:
             - nvm use 10
             - checkout
             - cache restore
             - yarn global add lerna
             - lerna bootstrap
+            - cache store
+  - name: Run Tests
+    dependencies: ["Install Monorepo Dependencies"]
+    task:
+      prologue:
+        commands:
+          - nvm use 10
+          - checkout
+          - cache restore
+      jobs:
+        - name: Test shared-utils
+          when: "branch != 'master' AND branch != 'develop' AND change_in('/shared-utils/')"
+          commands:
+            - lerna run test --scope @studiobear/shared-utils
+        - name: Test shared-ui-ionic
+          when: "branch != 'master' AND branch != 'develop' AND change_in('/shared-ui-ionic/')"
+          commands:
+            - lerna run test --scope @studiobear/shared-ui-ionic
+        - name: Test gatsby-theme-blog-ionic
+          when: "branch != 'master' AND branch != 'develop' AND change_in('/gatsby-theme-blog-ionic/')"
+          commands:
+            - lerna run test --scope @studiobear/gatsby-theme-blog-ionic
+      jobs:
+        - name: Test All Develop or Master
+          when: "result = 'passed' and (branch = 'master' OR branch = 'develop')"
+          commands:
+            - nvm use 10
+            - checkout
+            - cache restore
             - lerna run test
             - cache store
-  - name: 'Build Site'
+  - name: 'Build Sites'
+    dependencies: ["Run Tests"]
     task:
       jobs:
-        - name: Gatsby Build
+        - name: Build Core
+          run:
+          when: "result = 'passed' and (branch = 'master' OR branch = 'develop')"
           commands:
             - nvm use 10
             - checkout
@@ -29,7 +67,7 @@ blocks:
             - yarn workspace core gatsby build
             - cache store starter-build-$SEMAPHORE_GIT_BRANCH sites/core/public/
 promotions:
-  - name: Production deploy
-    pipeline_file: production-deploy.yml
+  - name: Deploy core
+    pipeline_file: core-deploy.yml
     auto_promote:
-      when: result = 'passed' and (branch = 'master')
+      when: result = 'passed' and (branch = 'master') and change_in('/core/')
