@@ -1,14 +1,20 @@
 version: v1.0
-name: Node JS Gatsby Build
+name: Starter CI
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+auto_cancel:
+  running:
+    when: 'true'
+fail_fast:
+  stop:
+    when: "branch != 'master' AND branch != 'develop'"
 blocks:
-  - name: Install dependencies
+  - name: Install Dependencies & Test
     task:
       jobs:
-        - name: yarn install
+        - name: Run Tests
           commands:
             - nvm use 10
             - checkout
@@ -16,20 +22,9 @@ blocks:
             - yarn global add lerna
             - lerna bootstrap
             - lerna run test
-            - cache store
-  - name: 'Build Site'
-    task:
-      jobs:
-        - name: Gatsby Build
-          commands:
-            - nvm use 10
-            - checkout
-            - cache restore
-            - yarn workspace core add @studiobear/shared-utils
-            - yarn workspace core gatsby build
-            - cache store starter-build-$SEMAPHORE_GIT_BRANCH sites/core/public/
+            - cache store monorepo-ci-$SEMAPHORE_GIT_BRANCH
 promotions:
-  - name: Production deploy
-    pipeline_file: production-deploy.yml
+  - name: Deploy core
+    pipeline_file: core-build.yml
     auto_promote:
-      when: result = 'passed' and (branch = 'master')
+      when: result = 'passed' and (branch = 'master') and change_in('/core/')
