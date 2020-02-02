@@ -1,5 +1,5 @@
 version: v1.0
-name: Node JS Gatsby Build
+name: Starter CI
 agent:
   machine:
     type: e1-standard-2
@@ -11,23 +11,10 @@ fail_fast:
   stop:
     when: "branch != 'master' AND branch != 'develop'"
 blocks:
-  - name: Install Monorepo Dependencies
-    dependencies: []
+  - name: Install Dependencies & Test
     task:
       jobs:
-        - name: Bootstrap monorepo
-          commands:
-            - nvm use 10
-            - checkout
-            - cache restore
-            - yarn global add lerna
-            - lerna bootstrap
-            - cache store
-  - name: Run Tests
-    dependencies: ['Install Monorepo Dependencies']
-    task:
-      jobs:
-        - name: Test All Develop or Master
+        - name: Run Tests
           commands:
             - nvm use 10
             - checkout
@@ -35,23 +22,9 @@ blocks:
             - yarn global add lerna
             - lerna bootstrap
             - lerna run test
-            - cache store
-  - name: 'Build Sites'
-    dependencies: ['Run Tests']
-    run:
-      when: "result = 'passed' and (branch = 'master' OR branch = 'develop')"
-    task:
-      jobs:
-        - name: Build Core
-          commands:
-            - nvm use 10
-            - checkout
-            - cache restore
-            - yarn workspace core add @studiobear/shared-utils
-            - yarn workspace core gatsby build
-            - cache store starter-build-$SEMAPHORE_GIT_BRANCH sites/core/public/
+            - cache store monorepo-ci-$SEMAPHORE_GIT_BRANCH
 promotions:
   - name: Deploy core
-    pipeline_file: core-deploy.yml
+    pipeline_file: core-build.yml
     auto_promote:
       when: result = 'passed' and (branch = 'master') and change_in('/core/')
