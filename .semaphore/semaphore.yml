@@ -23,29 +23,10 @@ blocks:
             - lerna bootstrap
             - cache store
   - name: Run Tests
-    dependencies: ["Install Monorepo Dependencies"]
+    dependencies: ['Install Monorepo Dependencies']
     task:
-      prologue:
-        commands:
-          - nvm use 10
-          - checkout
-          - cache restore
-      jobs:
-        - name: Test shared-utils
-          when: "branch != 'master' AND branch != 'develop' AND change_in('/shared-utils/')"
-          commands:
-            - lerna run test --scope @studiobear/shared-utils
-        - name: Test shared-ui-ionic
-          when: "branch != 'master' AND branch != 'develop' AND change_in('/shared-ui-ionic/')"
-          commands:
-            - lerna run test --scope @studiobear/shared-ui-ionic
-        - name: Test gatsby-theme-blog-ionic
-          when: "branch != 'master' AND branch != 'develop' AND change_in('/gatsby-theme-blog-ionic/')"
-          commands:
-            - lerna run test --scope @studiobear/gatsby-theme-blog-ionic
       jobs:
         - name: Test All Develop or Master
-          when: "result = 'passed' and (branch = 'master' OR branch = 'develop')"
           commands:
             - nvm use 10
             - checkout
@@ -53,12 +34,12 @@ blocks:
             - lerna run test
             - cache store
   - name: 'Build Sites'
-    dependencies: ["Run Tests"]
+    dependencies: ['Run Tests']
+    run:
+      when: "result = 'passed' and (branch = 'master' OR branch = 'develop')"
     task:
       jobs:
         - name: Build Core
-          run:
-          when: "result = 'passed' and (branch = 'master' OR branch = 'develop')"
           commands:
             - nvm use 10
             - checkout
