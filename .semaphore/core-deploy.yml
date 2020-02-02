@@ -1,7 +1,7 @@
 version: v1.0
-name: Production Deploy
+name: Production Deploy - Core
 blocks:
-  - name: 'Deploy to Netlify'
+  - name: 'Deploy Core to Netlify'
     task:
       secrets:
         - name: netlify-authentication
