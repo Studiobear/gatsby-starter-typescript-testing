@@ -1,7 +1,7 @@
 {
   "name": "@studiobear/shared-utils",
   "description": "Shared utilities for Studiobear",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "author": "Barry Low <barry@studiobear.co>",
   "publishConfig": {
     "access": "public"

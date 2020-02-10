@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.1.0](https://github.com/Studiobear/gatsby-starter-typescript-testing/compare/core@0.0.2...core@0.1.0) (2020-02-02)
+# [0.1.0](https://github.com/Studiobear/gatsby-starter-typescript-testing/compare/@studiobear/gatsby-theme-blog-ionic@0.0.2...@studiobear/gatsby-theme-blog-ionic@0.1.0) (2020-02-02)
 
 
 ### Bug Fixes
@@ -25,4 +25,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.2 (2020-01-27)
 
-**Note:** Version bump only for package core
+**Note:** Version bump only for package @studiobear/gatsby-theme-blog-ionic
