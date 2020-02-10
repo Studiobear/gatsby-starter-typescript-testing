@@ -1,6 +1,6 @@
 {
-  "name": "@studiobear/gatsby-theme-blog-ionic",
-  "description": "Gatsby theme with typescript and storybook built in. Based on gatsby-theme-typescript by Mae Capozzi",
+  "name": "@studiobear/gatsby-theme-blog",
+  "description": "Studiobear Gatsby blog theme",
   "version": "0.1.0",
   "main": "index.js",
   "author": "Barry Low <barry@studiobear.co>",
@@ -53,7 +53,6 @@
     "@loadable/component": "^5.12.0",
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
-    "@studiobear/shared-ui-ionic": "^0.1.0",
     "@studiobear/shared-utils": "^0.1.0",
     "gatsby-core-utils": "^1.0.26",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
@@ -72,6 +71,5 @@
     "prismjs": "^1.19.0",
     "react-helmet-async": "^1.0.4",
     "remark-slug": "^5.1.2"
-  },
-  "gitHead": "6200917235388cc135575c57380a381e433e2210"
+  }
 }
