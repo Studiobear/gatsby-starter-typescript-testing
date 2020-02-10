@@ -14,5 +14,13 @@
       "message": "chore(release): Publish",
       "registry": "https://registry.npmjs.org/"
     }
+  },
+  "changelog": {
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "bug": ":bug: Bug Fix",
+      "feat": ":rocket: New Feature"
+    },
+    "cacheDir": ".changelog"
   }
 }
